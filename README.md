@@ -2,6 +2,7 @@
 
 To do:
 - [ ] get jquery imports working
+- [ ] CSS responsive
 - [x] footer below about body
 - [ ] transitions
 - [ ] contact page
@@ -9,4 +10,3 @@ To do:
 - [ ] events page
 - [ ] home page (design)
 - [ ] installation pages
-

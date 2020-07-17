@@ -2,7 +2,7 @@
 
 To do:
 - [ ] get jquery imports working
-- [ ] footer below about body
+- [x] footer below about body
 - [ ] transitions
 - [ ] contact page
 - [ ] video embed

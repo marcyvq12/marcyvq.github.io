@@ -1,4 +1,8 @@
 # marcyvq.github.io
-- [x] Finish my changes
-- [ ] Push my commits to GitHub
-- [ ] Open a pull request
+
+To do:
+- [ ] get jquery imports working
+- [ ] footer below about body
+- [ ] home page
+- [ ] installation pages
+- [ ] video embed

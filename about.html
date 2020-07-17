@@ -8,19 +8,19 @@ body {
 .about-container {
 	position: relative;
 	left: 10vh;
+	margin-bottom: 20px;
 }
-
-.about-container::after {
+/*
+.about-container:after {
 	content: '.';
-	display: block;
+	display: table;
 	height: 0;
 	clear: both;
 	visibility: hidden;
-}
+}*/
 
 img {
 	width: 900px;
-	position: absolute;
 	left: 0;
 	top: 0;
 }
@@ -49,15 +49,16 @@ img {
 <iframe src="header.html" style="border:none;" width="100%"> </iframe>
 
 <div class="about-container">
-<img src="images/about.jpg">
+<img id="about-img" src="images/about.jpg">
 
 <div class="box">
 	<h2 id="about-title"> About Marceline VQ </h2>
 <p id="about"> Marceline VQ is an internationally recognized shibari artist whose work challenges viewers with aesthetic and technically complex rope work. She engages rope from all perspectives—as a model in her own rope, with other models in her rope, and as a model in others’ rope—allowing for a deeper understanding of the medium as a creative and connective tool. She adores the sensory experience of being in rope, as well as the idea of becoming “human sculpture.” Her work engages in conversation with themes from quantitative disciplines including geometry and physics and with themes from qualitative disciplines including analytic philosophy and universal empathy. She has studied with shibari communities across the globe, and is classically trained in visual fine arts. </p>
 </div>
+
 </div>
 
-<!-- <iframe src="footer.html" style="border:none;" width="100%"> </iframe> -->
 
+<iframe src="footer.html" style="border:none; display: block; bottom: 0;" width="100%"> </iframe>
 </body>
 </html>

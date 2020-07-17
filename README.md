@@ -3,6 +3,9 @@
 To do:
 - [ ] get jquery imports working
 - [ ] footer below about body
-- [ ] home page
-- [ ] installation pages
+- [ ] contact page
 - [ ] video embed
+- [ ] events page
+- [ ] home page (design)
+- [ ] installation pages
+

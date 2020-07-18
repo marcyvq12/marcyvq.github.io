@@ -1,8 +1,14 @@
 <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
 <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
 <script>
-var dict= d3.csv("./config/modeling_config.csv");
-
-document.write(dict);
+d3.csv("./config/modeling_config.csv", function(d) {
+  return {
+    fname: d.fname,
+    credits: d.credits,
+    alt: d.alt,
+  };
+}).then(function(data) {
+  console.log(data);
+});
 
 </script>

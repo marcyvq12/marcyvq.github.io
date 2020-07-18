@@ -1,15 +1,11 @@
 <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
 <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
 <script>
-d3.csv("./config/modeling_config.csv", function(d) {
-  return {
-    var fname= d.fname;
-    var credits = d.credits;
-   	var alt= d.alt;
-  };
-}).then(function(data) {
-  console.log(data);
+d3.csv("./config/modeling_config.csv").then(function(data) {
+  data.forEach(row => {
+      const field =  row["column_name"];
+  });
 });
 
-document.write(fname);
+document.write(data[0]);
 </script>

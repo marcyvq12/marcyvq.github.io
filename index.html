@@ -165,7 +165,7 @@ img.hover-shadow {
   </script>
 </head>
 
-<body onload="loadImages(images)">
+<body onload="loadCSV('./config/modeling_config.csv')">
 
 <div id= "header"></div>
 <!-- <iframe src="./header.html" style="border:none;" width="100%"> </iframe> -->
@@ -201,83 +201,29 @@ img.hover-shadow {
 
 <div id= "footer"></div>
 <!-- <iframe src="./footer.html" style="border:none;" width="100%"> </iframe> -->
-
+<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v1.min.js"></script>
 <script>
-var images = ["-mrcslkst-marcelinevq-5073-2.jpg",
-"IMG_9224-3.jpg",
-"IMG_7971.jpg",
-"IMG_20180105_112328_188.jpg",
-"IMG_6266.JPG",
-"IMG_8617.jpg",
-"08-11-2019-marcelline-01.jpg",
-"danielantonnyc-2488-Edit.jpg",
-"IMG_20170824_115847_444.jpg",
-"08-26-2017-marcelline-02.jpg",
-"IMG_8627.jpg",
-"IMG_1383-3.jpg",
-"MVQ 1.jpg",
-"8.15.17_Marcy0707.jpg",
-"IMG_6740.JPG",
-"IMG-20170824-WA0000.jpg",
-"20180728_131035.jpg",
-"IMG_8681.jpg",
-"selfweb_8516.jpg"];
 
-var captions = ["Photo by Marcus Likesit",
-"Photo by Dakota Snow",
-"Photo by Sving",
-"Photo by Anya Demure",
-"Photo by RGMPhoto",
-"Photo by Zeffi Walsh",
-"Photo by Paul Ward",
-"Photo by Daniel Anton",
-"Self-shot",
-"Photo by Paul Ward",
-"Photo by Dakota Snow",
-"Self-shot",
-"Photo by Will St. John",
-"Photo by Casey Mathewson",
-"Photo by Nazrul",
-"Self-shot",
-"Photo by Sving",
-"Photo by Dakota Snow",
-"Self-shot"];
-
-var descriptions = ["Woman in a white robe sitting near a window.",
-"Nude woman with long hair standing with arched back near a blue wall.",
-"Woman in a black dress standing on a balcony in winter.",
-"Nude woman lying on her stomach in purple lighting.",
-"Woman in a dress and wreath crown in a dark setting.",
-"Woman in lingerie gazing out of a window.",
-"Nude woman hanging from a pipe above a staircase.",
-"Woman in lingerie sitting in a chair next to a window.",
-"Nude woman sitting on the floor with plants.",
-"Nude woman kneeling on a chair in front of a green wall.",
-"Woman draped in patterned covering sitting.",
-"Woman wearing tank top lying on a bed in cool lighting.",
-"Nude woman standing on a box with back facing to camera.",
-"Nude portrait against a purple background with red light.",
-"Woman in rain kneeling with head facing up.",
-"Woman in rope sitting on a chair.",
-"Nude woman with arms bent in rope.",
-"Woman looking into camera with cloth draped over shoulder.",
-"Woman in rope standing against a wall."];
-
-function loadImages(imglist) {
+function loadImages(data) {
   var col1 = document.getElementById("col1");
   var col2 = document.getElementById("col2");
   var modal_content = document.getElementById("modalcontent");
 
-  var numimages = imglist.length;
-  for (i=0; i < imglist.length; i++) {
+  var numimages = data.length;
+  for (i=0; i < numimages; i++) {
+    fname = data[i]['fname'];
+    credits = data[i]['credits'];
+    alt = data[i]['alt'];
     var numstr = (i+1).toString();
     var onclickstr = "openModal();currentSlide(".concat(numstr, ")");
     var img = document.createElement("img");
-    img.src = "images/modeling/".concat(imglist[i]);
+    img.src = "images/modeling/".concat(fname);
+    img.setAttribute("title", credits);
     img.setAttribute("class", "hover-shadow");
     img.setAttribute("onclick", onclickstr);
     // img.setAttribute("title", descriptions[i]);
-    img.setAttribute("alt", descriptions[i]);
+    img.setAttribute("alt", alt);
 
     if (i % 2 == 0) {
       col1.appendChild(img);
@@ -291,15 +237,24 @@ function loadImages(imglist) {
     numbertext.setAttribute("class", "numbertext");
     numbertext.innerHTML = numstr.concat('/', numimages.toString());
     var img_big = document.createElement("img");
-    img_big.src = "images/modeling/".concat(imglist[i]);
+    img_big.src = "images/modeling/".concat(fname);
+    img_big.setAttribute("title", credits);
     img_big.setAttribute("style", "height: 75vh");
-    // img_big.setAttribute("title", descriptions[i]);
-    img_big.setAttribute("alt", descriptions[i]);
+    img_big.setAttribute("alt", alt);
 
     slide.appendChild(numbertext);
     slide.appendChild(img_big);
     modal_content.appendChild(slide);
   }
+}
+
+function loadCSV(path) {
+  d3.csv(path).then(function(data) {
+  data.forEach(row => {
+      const field =  row["column_name"];
+  });
+  loadImages(data);
+});
 }
 
 document.addEventListener("keydown", function(event) {
@@ -333,19 +288,20 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
+  // var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
+  // for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  // }
   slides[slideIndex-1].style.display = "block";
   // dots[slideIndex-1].className += " active";
-  captionText.innerHTML = captions[slideIndex-1];
+  var current_image = slides[slideIndex-1].getElementsByTagName("img")[0];
+  captionText.innerHTML = current_image.title;
 }
 </script>
     

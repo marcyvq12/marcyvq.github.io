@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 50%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  margin: auto;
+  padding: 0;
+  max-width: 90%;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.mySlides img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 50px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.prev {padding-left: 100px}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  padding-right: 100px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 20px;
+  /*padding: 8px 12px;*/
+  position: absolute;
+  top: -10%;
+  left: 49%;
+}
+
+img {
+  margin-bottom: -4px;
+  max-width: 100%;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: rgba(0,0,0,0);
+  padding: 15px 16px;
+  color: white;
+}
+
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row img {margin-bottom: 40px}
+
+</style>
+<!-- <head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#header").load("./header_withcss.html");
+  $('#footer').load("./footer.html");
+});
+  </script>
+</head> -->
+
+<body onload="loadCSV('./config/modeling_config.csv')">
+
+<div id= "header"></div>
+<!-- <iframe src="./header.html" style="border:none;" width="100%"> </iframe> -->
+
+<div class="row">
+  <div class="column" id="col1" style="padding: 20px; padding-left: 40px">
+    
+  </div>
+
+  <div class="column" id="col2" style="padding: 20px; padding-right: 40px;">
+    
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content" id="modalcontent">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption" style="font-size:20px"></p>
+    </div>
+
+
+    <div class="column">
+      
+  </div>
+</div>
+
+
+<div id= "footer"></div>
+<!-- <iframe src="./footer.html" style="border:none;" width="100%"> </iframe> -->
+<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+<script>
+
+var images = ["rgmphoto_crown.jpg",
+"dakota_shoulder.jpg",
+"caseymathewson.jpg",
+"self_plants.jpg",
+"marcuslikesit_bw.jpg",
+"paulward_hang.jpg",
+"self_web.jpg",
+"sving_arms.jpg",
+"self_ropebw.jpg",
+"zeffi_window.jpg",
+"paulward_chair.jpg",
+"dakota_blue.jpg",
+"nazrul_monsoon.jpg",
+"danielanton_chair.jpg",
+"sving_winter.jpg",
+"dakota_drape.jpg",
+"willstjohn_back.jpg",
+"anya_newyears.jpg",
+"self_strawberry.jpg"];
+
+var captions = ["Photo by Marcus Likesit",
+"Photo by Dakota Snow",
+"Photo by Sving",
+"Photo by Anya Demure",
+"Photo by RGMPhoto",
+"Photo by Zeffi Walsh",
+"Photo by Paul Ward",
+"Photo by Daniel Anton",
+"Self-shot",
+"Photo by Paul Ward",
+"Photo by Dakota Snow",
+"Self-shot",
+"Photo by Will St. John",
+"Photo by Casey Mathewson",
+"Photo by Nazrul",
+"Self-shot",
+"Photo by Sving",
+"Photo by Dakota Snow",
+"Self-shot"];
+
+var descriptions = ["Woman in a white robe sitting near a window.",
+"Nude woman with long hair standing with arched back near a blue wall.",
+"Woman in a black dress standing on a balcony in winter.",
+"Nude woman lying on her stomach in purple lighting.",
+"Woman in a dress and wreath crown in a dark setting.",
+"Woman in lingerie gazing out of a window.",
+"Nude woman hanging from a pipe above a staircase.",
+"Woman in lingerie sitting in a chair next to a window.",
+"Nude woman sitting on the floor with plants.",
+"Nude woman kneeling on a chair in front of a green wall.",
+"Woman draped in patterned covering sitting.",
+"Woman wearing tank top lying on a bed in cool lighting.",
+"Nude woman standing on a box with back facing to camera.",
+"Nude portrait against a purple background with red light.",
+"Woman in rain kneeling with head facing up.",
+"Woman in rope sitting on a chair.",
+"Nude woman with arms bent in rope.",
+"Woman looking into camera with cloth draped over shoulder.",
+"Woman in rope standing against a wall."];
+
+function loadImages(data) {
+  var col1 = document.getElementById("col1");
+  var col2 = document.getElementById("col2");
+  var modal_content = document.getElementById("modalcontent");
+
+  var numimages = imglist.length;
+  for (i=0; i < data.length; i++) {
+    img = data['fname'];
+    credits = data['credits'];
+    alt = data['alt'];
+    var numstr = (i+1).toString();
+    var onclickstr = "openModal();currentSlide(".concat(numstr, ")");
+    var img = document.createElement("img");
+    img.src = "images/modeling/".concat(fname);
+    img.setAttribute("title", credits);
+    img.setAttribute("class", "hover-shadow");
+    img.setAttribute("onclick", onclickstr);
+    // img.setAttribute("title", descriptions[i]);
+    img.setAttribute("alt", alt);
+
+    if (i % 2 == 0) {
+      col1.appendChild(img);
+    } else {
+      col2.appendChild(img);
+    }
+
+    var slide = document.createElement("div");
+    slide.setAttribute("class", "mySlides");
+    var numbertext = document.createElement("div");
+    numbertext.setAttribute("class", "numbertext");
+    numbertext.innerHTML = numstr.concat('/', numimages.toString());
+    var img_big = document.createElement("img");
+    img_big.src = "images/modeling/".concat(fname);
+    img_big.setAttribute("title", credits);
+    img_big.setAttribute("style", "height: 75vh");
+    img_big.setAttribute("alt", alt);
+
+    slide.appendChild(numbertext);
+    slide.appendChild(img_big);
+    modal_content.appendChild(slide);
+  }
+}
+
+function loadCSV(path) {
+  d3.csv(path).then(function(data) {
+  data.forEach(row => {
+      const field =  row["column_name"];
+  });
+  loadImages(data);
+});
+}
+
+document.addEventListener("keydown", function(event) {
+  if (event.keyCode == 37) 
+    {plusSlides(-1);}
+  else if (event.keyCode == 39) 
+    {plusSlides(1);}
+  else if (event.keyCode == 27)
+    {closeModal();}
+})
+
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  // var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  // for (i = 0; i < dots.length; i++) {
+  //     dots[i].className = dots[i].className.replace(" active", "");
+  // }
+  slides[slideIndex-1].style.display = "block";
+  // dots[slideIndex-1].className += " active";
+  var current_image = slides[slideIndex-1].getElementsByTagName("img")[0];
+  captionText.innerHTML = current_image.title;
+}
+</script>
+    
+</body>
+</html>

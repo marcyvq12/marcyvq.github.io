@@ -5,6 +5,7 @@ body {
 .about-container {
 	position: relative;
 	left: 10vh;
+	height: 30px;
 }
 
 img {
@@ -16,7 +17,7 @@ img {
 .box {
 	width: 450px;
 	background-color: #C1C7C9;
-	/*position: absolute;*/
+	position: absolute;
 	right: 300px;
 	top: 300px;
 	z-index: 9;

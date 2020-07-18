@@ -1,0 +1,33 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+.about-container {
+	position: relative;
+	left: 10vh;
+}
+
+img {
+	width: 900px;
+	left: 0;
+	top: 0;
+}
+
+.box {
+	width: 450px;
+	background-color: #C1C7C9;
+	position: absolute;
+	right: 300px;
+	top: 300px;
+	z-index: 9;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.box > * {
+	padding: 20px;
+}
+
+#about {
+	font-size: 20px;
+	padding-top: 0;
+}

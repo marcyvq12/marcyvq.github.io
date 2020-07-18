@@ -1,43 +1,19 @@
 <!DOCTYPE html>
 <html>
-<style>
-body {
-	font-family: Helvetica, sans-serif;
-}
+<head>
+  <link rel="stylesheet" type="text/css" href="./css/about.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#header").load("./header_withcss.html");
+  $('#footer').load("./footer.html");
+});
+  </script>
+</head>
 
-.about-container {
-	position: relative;
-	left: 10vh;
-}
-
-img {
-	width: 900px;
-	left: 0;
-	top: 0;
-}
-
-.box {
-	width: 450px;
-	background-color: #C1C7C9;
-	position: absolute;
-	right: 300px;
-	top: 300px;
-	z-index: 9;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.box > * {
-	padding: 20px;
-}
-
-#about {
-	font-size: 20px;
-	padding-top: 0;
-}
-
-</style>
 <body>
-<iframe src="header_withcss.html" style="border:none;" width="100%"> </iframe>
+<div id="header"></div>
+<!-- <iframe src="header_withcss.html" style="border:none;" width="100%"> </iframe> -->
 
 <div class="about-container">
 <img id="about-img" src="images/about.jpg">
@@ -49,5 +25,6 @@ img {
 </div>
 
 <iframe src="footer.html" style="border:none; display: block; bottom: 0;" width="100%"> </iframe>
+<div id="footer"></div>
 </body>
 </html>

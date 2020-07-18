@@ -1,7 +1,9 @@
 # marcyvq.github.io
 
-To do:
-- [ ] get jquery imports working
+## To do:
+- [x] get jquery imports working
+- [ ] link page elements
+- [ ] separate .css, .js
 - [ ] CSS responsive
 - [x] footer below about body
 - [ ] transitions

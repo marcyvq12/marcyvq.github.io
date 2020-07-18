@@ -2,7 +2,7 @@
 
 ## To do:
 - [x] get jquery imports working
-- [ ] link page elements
+- [x] link page elements
 - [ ] separate .css, .js
 - [ ] CSS responsive
 - [x] footer below about body

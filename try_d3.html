@@ -3,9 +3,9 @@
 <script>
 d3.csv("./config/modeling_config.csv", function(d) {
   return {
-    fname: d.fname,
-    credits: d.credits,
-    alt: d.alt,
+    var fname= d.fname;
+    var credits = d.credits;
+   	var alt= d.alt;
   };
 }).then(function(data) {
   console.log(data);

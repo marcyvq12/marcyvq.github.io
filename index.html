@@ -155,10 +155,19 @@ img.hover-shadow {
 .row img {margin-bottom: 40px}
 
 </style>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#header").load("./header_withcss.html");
+  $('#footer').load("./footer.html");</script>
+</head>
 
 <body onload="loadImages(images)">
 
-<iframe src="./header.html" style="border:none;" width="100%"> </iframe>
+<div id= "header"></div>
+<!-- <iframe src="./header.html" style="border:none;" width="100%"> </iframe> -->
+
 <div class="row">
   <div class="column" id="col1" style="padding: 20px; padding-left: 40px">
     
@@ -187,7 +196,9 @@ img.hover-shadow {
   </div>
 </div>
 
-<iframe src="./footer.html" style="border:none;" width="100%"> </iframe>
+
+<div id= "footer"></div>
+<!-- <iframe src="./footer.html" style="border:none;" width="100%"> </iframe> -->
 
 <script>
 var images = ["-mrcslkst-marcelinevq-5073-2.jpg",

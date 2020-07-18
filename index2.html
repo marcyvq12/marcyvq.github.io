@@ -155,7 +155,7 @@ img.hover-shadow {
 .row img {margin-bottom: 40px}
 
 </style>
-<!-- <head>
+<head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
@@ -163,7 +163,7 @@ img.hover-shadow {
   $('#footer').load("./footer.html");
 });
   </script>
-</head> -->
+</head>
 
 <body onload="loadCSV('./config/modeling_config.csv')">
 
@@ -204,66 +204,6 @@ img.hover-shadow {
 <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
 <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
 <script>
-
-var images = ["rgmphoto_crown.jpg",
-"dakota_shoulder.jpg",
-"caseymathewson.jpg",
-"self_plants.jpg",
-"marcuslikesit_bw.jpg",
-"paulward_hang.jpg",
-"self_web.jpg",
-"sving_arms.jpg",
-"self_ropebw.jpg",
-"zeffi_window.jpg",
-"paulward_chair.jpg",
-"dakota_blue.jpg",
-"nazrul_monsoon.jpg",
-"danielanton_chair.jpg",
-"sving_winter.jpg",
-"dakota_drape.jpg",
-"willstjohn_back.jpg",
-"anya_newyears.jpg",
-"self_strawberry.jpg"];
-
-var captions = ["Photo by Marcus Likesit",
-"Photo by Dakota Snow",
-"Photo by Sving",
-"Photo by Anya Demure",
-"Photo by RGMPhoto",
-"Photo by Zeffi Walsh",
-"Photo by Paul Ward",
-"Photo by Daniel Anton",
-"Self-shot",
-"Photo by Paul Ward",
-"Photo by Dakota Snow",
-"Self-shot",
-"Photo by Will St. John",
-"Photo by Casey Mathewson",
-"Photo by Nazrul",
-"Self-shot",
-"Photo by Sving",
-"Photo by Dakota Snow",
-"Self-shot"];
-
-var descriptions = ["Woman in a white robe sitting near a window.",
-"Nude woman with long hair standing with arched back near a blue wall.",
-"Woman in a black dress standing on a balcony in winter.",
-"Nude woman lying on her stomach in purple lighting.",
-"Woman in a dress and wreath crown in a dark setting.",
-"Woman in lingerie gazing out of a window.",
-"Nude woman hanging from a pipe above a staircase.",
-"Woman in lingerie sitting in a chair next to a window.",
-"Nude woman sitting on the floor with plants.",
-"Nude woman kneeling on a chair in front of a green wall.",
-"Woman draped in patterned covering sitting.",
-"Woman wearing tank top lying on a bed in cool lighting.",
-"Nude woman standing on a box with back facing to camera.",
-"Nude portrait against a purple background with red light.",
-"Woman in rain kneeling with head facing up.",
-"Woman in rope sitting on a chair.",
-"Nude woman with arms bent in rope.",
-"Woman looking into camera with cloth draped over shoulder.",
-"Woman in rope standing against a wall."];
 
 function loadImages(data) {
   var col1 = document.getElementById("col1");

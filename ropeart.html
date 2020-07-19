@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <link rel="stylesheet" type="text/css" href="./css/gallery.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#header").load("./header.html");
+  $('#footer').load("./footer.html");
+});
+  </script>
+</head>
+
+<body onload="loadCSV('./config/ropeart_config.csv')">
+
+<div id= "header"></div>
+
+<div class="row">
+  <div class="column" id="col1" style="padding: 20px; padding-left: 40px">
+    
+  </div>
+
+  <div class="column" id="col2" style="padding: 20px; padding-right: 40px;">
+    
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content" id="modalcontent">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption" style="font-size:20px"></p>
+    </div>
+
+
+    <div class="column">
+      
+  </div>
+</div>
+
+
+<div id= "footer"></div>
+
+<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+<script src="./js/gallery.js"></script>
+    
+</body>
+</html>

@@ -3,7 +3,7 @@ body {
 }
 
 .about-container {
-	position: relative;
+	position: static;
 	left: 10vh;
 }
 

@@ -4,10 +4,9 @@ body {
 
 .about-container {
 	position: static;
-	/*width: 100vw;*/
 }
 
-img {
+#about-img {
 	width : 60vw;
 	padding-left: 10vw;
 }

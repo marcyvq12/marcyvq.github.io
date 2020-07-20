@@ -7,6 +7,10 @@
   $(document).ready(function(){
   $("#header").load("./header.html");
   $('#footer').load("./footer.html");
+  $('#about').load("./config/about_text.html");
+  console.log($("#about").text());
+  $('#about').load("./config/about.txt");
+  console.log($("#about").text());
 });
   </script>
 </head>
@@ -19,7 +23,8 @@
 
 <div class="box">
 	<h2 id="about-title"> About Marceline VQ </h2>
-<p id="about"> Marceline VQ is an internationally recognized shibari artist whose work challenges viewers with aesthetic and technically complex rope work. She engages rope from all perspectives—as a model in her own rope, with other models in her rope, and as a model in others’ rope—allowing for a deeper understanding of the medium as a creative and connective tool. She adores the sensory experience of being in rope, as well as the idea of becoming “human sculpture.” Her work engages in conversation with themes from quantitative disciplines including geometry and physics and with themes from qualitative disciplines including analytic philosophy and universal empathy. She has studied with shibari communities across the globe, and is classically trained in visual fine arts. </p>
+<p id="about"> 
+	<!-- <embed src="./config/about.txt"> </p> -->
 </div>
 </div>
 

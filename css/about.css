@@ -4,21 +4,20 @@ body {
 
 .about-container {
 	position: static;
-	left: 10vh;
+	width: 100vw;
 }
 
 img {
-	width: 900px;
-	left: 10vh;
-	top: 0;
+	width : 60vw;
+	padding-left: 10vw;
 }
 
 .box {
-	width: 40vh;
+	width: 30vw;
 	background-color: #C1C7C9;
 	position: absolute;
-	right: 300px;
-	top: 300px;
+	right: 10vw;
+	top: 30vh;
 	z-index: 9;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }

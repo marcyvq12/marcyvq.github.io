@@ -6,12 +6,12 @@ body {
 	display: inline-block;
 	width: 40vw;
 	padding-left: 5vw;
-	padding-top: 30px;
 	padding-bottom: 30px;
 }
 
 #contact-img {
 	/*width : 40vw;*/
+	padding-top: 30px;
 	padding-left: 10vw;
 	height: 700px;
 	overflow: hidden;

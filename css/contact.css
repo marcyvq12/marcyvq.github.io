@@ -2,34 +2,37 @@ body {
 	font-family: Helvetica, sans-serif;
 }
 
-.about-container {
-	position: static;
+.contact-container {
+	display: inline-block;
+	width: 40vw;
+	padding-left: 5vw;
 }
 
-#about-img {
-	width : 60vw;
+#contact-img {
+	width : 40vw;
 	padding-left: 10vw;
 }
 
-.box {
-	width: 30vw;
-	background-color: #C1C7C9;
-	position: absolute;
-	right: 10vw;
-	top: 30vh;
-	z-index: 9;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
 }
 
-.box > * {
-	padding: 20px;
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-#about {
-	font-size: 20px;
-	padding-top: 0;
+input[type=submit]:hover {
+  background-color: #45a049;
 }
-
-#header {
-	z-index: 9999;
-	margin-bottom:20px;}

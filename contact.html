@@ -7,20 +7,56 @@
   $(document).ready(function(){
   $("#header").load("./header.html");
   $('#footer').load("./footer.html");
-});
+
+  $("#submit").click(function() {
+  var name = $("#input-name").val();
+  var email = $("#input-email").val();
+  var message = $("#input-message").val();
+  $("#returnmessage").empty(); // To empty previous error/success message.
+  // Checking for blank fields.
+  if (name == '' || email == '' || contact == '') {
+  alert("Please Fill Required Fields");
+  } else {
+  // Returns successful data submission message when the entered information is stored in database.
+  $.post("contact_form.php", {
+  name1: name,
+  email1: email,
+  message1: message
+  }, function(data) {
+  $("#returnmessage").append(data); // Append returned message to message paragraph.
+  if (data == "Your Query has been received, We will contact you soon.") {
+    alert("Wah!");
+  $("#form")[0].reset(); // To reset form fields on success.
+  }
+  });
+  }
+  });
+  });
   </script>
 </head>
 
 <body>
 <div id="header"></div>
 
-<div class="about-container">
-<img id="about-img" src="images/about.jpg">
 
-<div class="box">
-	<h2 id="about-title"> Contact</h2>
-<p id="about"> 
-</div>
+<img id="contact-img" src="images/contact.jpg">
+
+
+<div class="contact-container">
+<h3>Contact Form</h3>
+  <form method="post">
+    <label for="fname">Name</label>
+    <input type="text" id="input-name" name="firstname" placeholder="Your name...">
+
+    <label for="email">Email</label>
+    <input type="text" id="input-email" name="email" placeholder="Your email...">
+    </select>
+
+    <label for="message">Your Message</label>
+    <textarea id="input-message" name="message" placeholder="Write something..." style="height:200px"></textarea>
+
+    <input id="submit" type="submit" value="Submit">
+  </form>
 </div>
 
 <div id="footer"></div>

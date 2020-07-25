@@ -5,8 +5,9 @@
 - [x] link page elements
 - [x] separate .css, .js
 - [x] footer below about body
-- [ ] fix about.css
+- [x] fix about.css
 - [ ] contact page
+- [ ] change gallery captions
 - [ ] video embed
 - [ ] events page
 - [ ] CSS responsive

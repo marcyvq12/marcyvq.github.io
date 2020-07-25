@@ -9,8 +9,18 @@ body {
 }
 
 #contact-img {
-	width : 40vw;
+	/*width : 40vw;*/
 	padding-left: 10vw;
+	height: 700px;
+	overflow: hidden;
+}
+
+.social {
+	display: block;
+	/*text-align: center;*/
+	padding-top: 30px;
+	padding-bottom: 30px;
+
 }
 
 input[type=text], select, textarea {
@@ -25,7 +35,7 @@ input[type=text], select, textarea {
 }
 
 input[type=submit] {
-  background-color: #4CAF50;
+  background-color: #b3b3b3;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -34,5 +44,5 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: #727272;
 }

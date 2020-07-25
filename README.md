@@ -6,7 +6,7 @@
 - [x] separate .css, .js
 - [x] footer below about body
 - [x] fix about.css
-- [ ] contact page
+- [x] contact page
 - [ ] change gallery captions
 - [ ] video embed
 - [ ] events page

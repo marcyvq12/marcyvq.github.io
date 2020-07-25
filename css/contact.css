@@ -6,6 +6,8 @@ body {
 	display: inline-block;
 	width: 40vw;
 	padding-left: 5vw;
+	padding-top: 30px;
+	padding-bottom: 30px;
 }
 
 #contact-img {
@@ -13,13 +15,13 @@ body {
 	padding-left: 10vw;
 	height: 700px;
 	overflow: hidden;
+	max-width: 80vw;
 }
 
 .social {
 	display: block;
 	/*text-align: center;*/
 	padding-top: 30px;
-	padding-bottom: 30px;
 
 }
 

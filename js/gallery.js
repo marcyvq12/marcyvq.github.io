@@ -32,7 +32,7 @@ function loadImages(data) {
     var img_big = document.createElement("img");
     img_big.src = "images/modeling/".concat(fname);
     img_big.setAttribute("title", credits);
-    img_big.setAttribute("style", "height: 75vh");
+    // img_big.setAttribute("style", "height: 75vh");
     img_big.setAttribute("alt", alt);
 
     slide.appendChild(numbertext);

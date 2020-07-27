@@ -72,6 +72,20 @@ body {
     margin-right: auto;
 }
 
+@media screen and (orientation:landscape) {
+  .mySlides img {
+  height: 75vh;
+  width: auto;
+}
+}
+
+@media screen and (orientation:portrait) {
+  .mySlides img {
+  height: auto;
+  width: 75vw;
+}
+}
+
 .cursor {
   cursor: pointer;
 }

@@ -95,16 +95,19 @@
 }
 @media screen and (max-width: 1000px) {
   .nav-bar.responsive {
-  	position: relative;
+  	position: absolute;
+  	background-color: white;
   	display: block;
   	left:0;
-  	width: 200px;
+  	/*margin-top: -50px;*/
+  	width: 300px;
   	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
   .nav-bar.responsive a.icon {
     position: absolute;
-    left: 0;
+    right: 0;
     top: 0;
+    padding-top: 20px;
   }
   .nav-bar.responsive a {
     float: none;

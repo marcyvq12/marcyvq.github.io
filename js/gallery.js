@@ -8,10 +8,12 @@ function loadImages(data) {
     fname = data[i]['fname'];
     credits = data[i]['credits'];
     alt = data[i]['alt'];
+    folder = data[i]['category'];
     var numstr = (i+1).toString();
     var onclickstr = "openModal();currentSlide(".concat(numstr, ")");
     var img = document.createElement("img");
-    img.src = "images/modeling/".concat(fname);
+    img.src = "images/".concat(folder, "/", fname);
+    console.log("images/".concat(folder, "/", fname));
     img.setAttribute("title", credits);
     img.setAttribute("class", "hover-shadow");
     img.setAttribute("onclick", onclickstr);

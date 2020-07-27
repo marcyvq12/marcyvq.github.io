@@ -14,7 +14,6 @@ function loadImages(data) {
     var img = document.createElement("img");
     var img_path = "images/".concat(folder, "/", fname);
     img.src = img_path;
-    console.log(fname);
     img.setAttribute("title", credits);
     img.setAttribute("class", "hover-shadow");
     img.setAttribute("onclick", onclickstr);

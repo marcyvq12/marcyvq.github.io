@@ -12,8 +12,9 @@ function loadImages(data) {
     var numstr = (i+1).toString();
     var onclickstr = "openModal();currentSlide(".concat(numstr, ")");
     var img = document.createElement("img");
-    img.src = "images/".concat(folder, "/", fname);
-    console.log("images/".concat(folder, "/", fname));
+    var img_path = "images/".concat(folder, "/", fname);
+    img.src = img_path;
+    console.log(fname);
     img.setAttribute("title", credits);
     img.setAttribute("class", "hover-shadow");
     img.setAttribute("onclick", onclickstr);
@@ -32,7 +33,7 @@ function loadImages(data) {
     numbertext.setAttribute("class", "numbertext");
     numbertext.innerHTML = numstr.concat('/', numimages.toString());
     var img_big = document.createElement("img");
-    img_big.src = "images/modeling/".concat(fname);
+    img_big.src = img_path;
     img_big.setAttribute("title", credits);
     // img_big.setAttribute("style", "height: 75vh");
     img_big.setAttribute("alt", alt);

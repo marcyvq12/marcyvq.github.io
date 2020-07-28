@@ -10,7 +10,10 @@
 - [x] video embed
 - [ ] change gallery captions
 - [ ] events page
-- [ ] CSS responsive
+- [ ] format modal gallery mobile version
+- [ ] format dropdown nav mobile version
+- [ ] header visible with scroll up
+- [ ] about page mobile version
 - [ ] transitions
 - [ ] home page (design)
 - [ ] installation pages

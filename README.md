@@ -7,8 +7,8 @@
 - [x] footer below about body
 - [x] fix about.css
 - [x] contact page
+- [x] video embed
 - [ ] change gallery captions
-- [ ] video embed
 - [ ] events page
 - [ ] CSS responsive
 - [ ] transitions

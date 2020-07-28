@@ -101,6 +101,7 @@
   	left:0;
   	/*margin-top: -50px;*/
   	width: 300px;
+  	z-index: 1000;
   	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
   .nav-bar.responsive a.icon {
@@ -115,7 +116,8 @@
     text-align: left;
   }
 
-  .nav-bar.responsive .dropdown {float: none;}
+  .nav-bar.responsive .dropdown {float: none;
+  width: 300px;}
   .nav-bar.responsive .dropdown-content {
   	position: relative;
   	box-shadow: none;

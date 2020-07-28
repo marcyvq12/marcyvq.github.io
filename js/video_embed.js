@@ -21,8 +21,11 @@ function loadVideos(data) {
     vid_caption.appendChild(cap_text);
 
     var vid_embed = document.createElement("div");
-    vid_embed.setAttribute("class", "youtube-player");
-    vid_embed.setAttribute("data-id", data[i]["vid_id"]);
+    vid_embed.setAttribute("class", "vid-embed");
+    var yt_embed = document.createElement("div");
+    yt_embed.setAttribute("class", "youtube-player");
+    yt_embed.setAttribute("data-id", data[i]["vid_id"]);
+    vid_embed.appendChild(yt_embed);
 
     video_div.appendChild(vid_title);
     video_div.appendChild(vid_caption);

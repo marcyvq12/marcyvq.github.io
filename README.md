@@ -14,6 +14,7 @@
 - [ ] format dropdown nav mobile version
 - [ ] header visible with scroll up
 - [ ] about page mobile version
+- [ ] contact page mobile version
 - [ ] transitions
 - [ ] home page (design)
 - [ ] installation pages

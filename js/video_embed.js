@@ -2,6 +2,43 @@
 
 /* Web: http://labnol.org/?p=27941 */
 
+function loadVideos(data) {
+  var numvids = data.length;
+  for (i=0; i < numvids; i++) {
+    var video_div = document.createElement("div");
+
+    var vid_title = document.createElement("h2");
+    vid_title.innerHTML = data[i]["title"];
+    vid_title.setAttribute("class","vid-title");
+
+    var vid_caption = document.createElement("div");
+    vid_caption.setAttribute("class", "vid-caption");
+    var cap_text = document.createElement("p");
+    cap_text.innerHTML = data[i]["caption"];
+    vid_caption.appendChild(cap_text);
+
+    var vid_embed = document.createElement("div");
+    vid_embed.setAttribute("class", "youtube-player");
+    vid_embed.setAttribute("data-id", data[i]["vid_id"]);
+
+    video_div.appendChild(vid_title);
+    video_div.appendChild(vid_caption);
+    video_div.appendChild(vid_embed);
+
+    document.body.appendChild(video_div);
+}
+}
+
+
+function loadCSV_vid(path) {
+  d3.csv(path).then(function(data) {
+  data.forEach(row => {
+      const field =  row["column_name"];
+  });
+  loadVideos(data);
+});
+}
+
 document.addEventListener("DOMContentLoaded",
     function() {
         var div, n,

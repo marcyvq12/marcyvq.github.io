@@ -4,8 +4,11 @@
 
 function loadVideos(data) {
   var numvids = data.length;
+  var container = document.getElementByID("vid-container");
+
   for (i=0; i < numvids; i++) {
     var video_div = document.createElement("div");
+    video_div.setAttribute("class", "video");
 
     var vid_title = document.createElement("h2");
     vid_title.innerHTML = data[i]["title"];
@@ -25,7 +28,7 @@ function loadVideos(data) {
     video_div.appendChild(vid_caption);
     video_div.appendChild(vid_embed);
 
-    document.body.appendChild(video_div);
+    container.appendChild(video_div);
 }
 }
 

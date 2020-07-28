@@ -1,3 +1,7 @@
+body {
+  font-family: Helvetica, sans-serif;
+}
+
 .youtube-player {
     position: relative;
     padding-bottom: 56.23%;
@@ -52,4 +56,37 @@
     position: absolute;
     background: url("//i.imgur.com/TxzC70f.png") no-repeat;
     cursor: pointer;
+}
+
+.video {
+    padding-left: 80px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+.vid-embed {
+    width: 50vw;
+    display: inline-block;
+}
+
+.vid-caption {
+    width: 30vw;
+    display: inline-block;
+}
+
+@media screen and (max-width: 750px) {
+
+.video {
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+
+.vid-embed {
+    width: 80vw;
+    display: block;
+}
+
+.vid-caption {
+    display: block;
+}
 }

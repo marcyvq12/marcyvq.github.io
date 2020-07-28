@@ -4,7 +4,7 @@
 
 function loadVideos(data) {
   var numvids = data.length;
-  var container = document.getElementByID("vid-container");
+  var container = document.getElementById("vid-container");
 
   for (i=0; i < numvids; i++) {
     var video_div = document.createElement("div");

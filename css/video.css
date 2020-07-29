@@ -88,5 +88,6 @@ body {
 
 .vid-caption {
     display: block;
+    width: 60vw;
 }
 }

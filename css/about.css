@@ -16,7 +16,7 @@ body {
 	background-color: #C1C7C9;
 	position: absolute;
 	right: 10vw;
-	top: 30vh;
+	top: 150px;
 	z-index: 9;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -26,10 +26,21 @@ body {
 }
 
 #about {
-	font-size: 20px;
+	/*/*font-size: 20px;*/
 	padding-top: 0;
+	font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+#about-title {
+	padding-bottom: 0;
 }
 
 #header {
 	z-index: 9999;
 	margin-bottom:20px;}
+
+/*@media screen and (max-width: 1000px) {
+	#about-img {
+		width: 80vw;
+	}
+}*/

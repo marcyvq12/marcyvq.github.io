@@ -106,6 +106,7 @@ function showSlides(n) {
     else {
       wh = 2;
     }
+    console.log(wh);
   }
   else if ((current_image.clientWidth > 0.75 * screen.width) || (wh == 1)) {
     current_image.setAttribute("max-width", "75vw");

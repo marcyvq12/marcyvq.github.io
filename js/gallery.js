@@ -94,7 +94,7 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
   }
   catch (err) {
-    conslole.log(slideIndex);
+    console.log(slideIndex);
     console.log(slides[slideIndex-1]);
   }
   var current_image = slides[slideIndex-1].getElementsByTagName("img")[0];

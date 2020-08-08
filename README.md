@@ -9,12 +9,12 @@
 - [x] contact page
 - [x] video embed
 - [x] format modal gallery mobile version
+- [x] contact page mobile version
 - [ ] change gallery captions
 - [ ] events page
 - [ ] format dropdown nav mobile version
 - [ ] header visible with scroll up
 - [ ] about page mobile version
-- [ ] contact page mobile version
 - [ ] transitions
 - [ ] home page (design)
 - [ ] installation pages

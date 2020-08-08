@@ -2,6 +2,7 @@ function loadImages(data) {
   var col1 = document.getElementById("col1");
   var col2 = document.getElementById("col2");
   var modal_content = document.getElementById("modalcontent");
+  var captionbox = document.getElementById("captionbox");
 
   var numimages = data.length;
   for (i=0; i < numimages; i++) {
@@ -39,7 +40,7 @@ function loadImages(data) {
 
     slide.appendChild(numbertext);
     slide.appendChild(img_big);
-    modal_content.appendChild(slide);
+    modal_content.insertBefore(slide, captionbox);
   }
 }
 

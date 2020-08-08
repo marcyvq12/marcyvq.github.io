@@ -8,9 +8,9 @@
 - [x] fix about.css
 - [x] contact page
 - [x] video embed
+- [x] format modal gallery mobile version
 - [ ] change gallery captions
 - [ ] events page
-- [ ] format modal gallery mobile version
 - [ ] format dropdown nav mobile version
 - [ ] header visible with scroll up
 - [ ] about page mobile version

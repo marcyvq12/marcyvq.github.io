@@ -104,7 +104,7 @@ function showSlides(n) {
       wh = 1;
     }
     else {
-      wh=2;
+      wh = 2;
     }
   }
   else if ((current_image.clientWidth > 0.75 * screen.width) || (wh == 1)) {

@@ -77,20 +77,7 @@ body {
     height: auto;
 }
 
-/*@media screen and (orientation:landscape) {
-  .mySlides img {
-  height: 75vh;
-  width: auto;
-}
-}
 
-@media screen and (orientation:portrait) {
-  .mySlides img {
-  height: auto;
-  max-width: 75vw;
-}
-}
-*/
 .cursor {
   cursor: pointer;
 }
@@ -131,13 +118,6 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-@media screen and (max-width: 500px) {
-  .prev, 
-  .next {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 10px;
-  }
 
 /* Number text (1/3 etc) */
 .numbertext {
@@ -179,3 +159,11 @@ img.hover-shadow {
 }
 
 .row img {margin-bottom: 40px}
+  
+ @media screen and (max-width: 700px) {
+  .prev, 
+  .next {
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 10px;
+  }

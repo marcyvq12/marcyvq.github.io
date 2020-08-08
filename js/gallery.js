@@ -98,28 +98,29 @@ function showSlides(n) {
     console.log(slides[slideIndex-1]);
   }
   var current_image = slides[slideIndex-1].getElementsByTagName("img")[0];
+  var wider = false;
   if ((current_image.clientWidth > 0.75 * screen.width) && (current_image.clientHeight > 0.75 * screen.height)) {
     console.log("bof");
     if (current_image.clientWidth > current_image.clientHeight) {
-      current_image.setAttribute("max-width", "75vw");
-      current_image.setAttribute("height", "auto");
-      console.log("wider");
+      wider = true;
     }
     else {
-      current_image.setAttribute("max-height", "75vh");
-      current_image.setAttribute("width", "auto");
-      console.log("taller");
+      wider = false;
     }
   }
   else if (current_image.clientWidth > 0.75 * screen.width) {
+    wider = true;
+  }
+  else {
+    wider = false;
+  }
+  if (wider) {
     current_image.setAttribute("max-width", "75vw");
     current_image.setAttribute("height", "auto");
-    console.log("wide");
   }
   else {
     current_image.setAttribute("max-height", "75vh");
     current_image.setAttribute("width", "auto");
-    console.log("tall");
   }
   captionText.innerHTML = current_image.title;
 }

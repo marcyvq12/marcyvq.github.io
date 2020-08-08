@@ -71,7 +71,7 @@ function closeModal() {
 }
 
 var slideIndex = 1;
-showSlides(slideIndex);
+// showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -98,7 +98,13 @@ function showSlides(n) {
     console.log(slides[slideIndex-1]);
   }
   var current_image = slides[slideIndex-1].getElementsByTagName("img")[0];
-  console.log(current_image.clientWidth)
-  console.log(current_image.clientHeight)
+  if (current_image.clientWidth > 0.75 * screen.width) {
+    current_image.style.max-width = "75vw";
+    current_image.style.height = "auto";
+  }
+  else if (current_image.clientHeight > 0.75 * screen.height) {
+    current_image.style.max-height = "75vh";
+    current_image.style.width = "auto";
+  }
   captionText.innerHTML = current_image.title;
 }

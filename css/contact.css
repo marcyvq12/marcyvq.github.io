@@ -103,9 +103,9 @@ input[type=submit]:hover {
     font-size: 2vw;
   }
 
-  input {
+  /*input {
     height: 2.5vw;
-  } 
+  } */
 
   .contact-container {
     padding: 20px;
@@ -122,10 +122,12 @@ input[type=submit]:hover {
   input[type=text], select, textarea {
     padding: 0;
     margin: 0;
+    font-size: 2vw;
   }
 
   input[type=submit] {
     padding: 3px 7px;
+    font-size: 2vw;
   }
 
   input::placeholder {

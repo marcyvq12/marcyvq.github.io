@@ -98,28 +98,6 @@ function showSlides(n) {
     console.log(slides[slideIndex-1]);
   }
   var current_image = slides[slideIndex-1].getElementsByTagName("img")[0];
-  // var wider = false;
-  // if ((current_image.clientWidth > 0.75 * screen.width) && (current_image.clientHeight > 0.75 * screen.height)) {
-  //   console.log("bof");
-  //   if (current_image.clientWidth > current_image.clientHeight) {
-  //     wider = true;
-  //   }
-  //   else {
-  //     wider = false;
-  //   }
-  // }
-  // else if (current_image.clientWidth > 0.75 * screen.width) {
-  //   wider = true;
-  // }
-  // else {
-  //   wider = false;
-  // }
-  // if (wider) {
-  //   current_image.setAttribute("style", "max-width: 75vw; height: auto;");
-  // }
-  // else {
-  //   current_image.setAttribute("style", "max-height: 75vh; width: auto;");
-  // }
-  current_image.setAttribute("style", "max-width: 75vw; max-height: 75vh; width: auto; height: auto;");
+  
   captionText.innerHTML = current_image.title;
 }

@@ -42,7 +42,10 @@ body {
   background-color: rgba(0, 0, 0, 0);
   margin: auto;
   padding: 0;
-  max-width: 90%;
+  max-width: 75vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -135,7 +138,7 @@ body {
   left: 49%;
 }
 
-img {
+.column img {
   margin-bottom: -4px;
   max-width: 100%;
 }

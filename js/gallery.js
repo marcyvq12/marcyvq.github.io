@@ -115,12 +115,10 @@ function showSlides(n) {
     wider = false;
   }
   if (wider) {
-    current_image.setAttribute("max-width", "75vw");
-    current_image.setAttribute("height", "auto");
+    current_image.setAttribute("style", "max-width: 75vw; height: auto;");
   }
   else {
-    current_image.setAttribute("max-height", "75vh");
-    current_image.setAttribute("width", "auto");
+    current_image.setAttribute("style", "max-height: 75vh; width: auto;");
   }
   captionText.innerHTML = current_image.title;
 }

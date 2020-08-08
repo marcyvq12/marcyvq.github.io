@@ -18,7 +18,6 @@ function loadImages(data) {
     img.setAttribute("title", credits);
     img.setAttribute("class", "hover-shadow");
     img.setAttribute("onclick", onclickstr);
-    // img.setAttribute("title", descriptions[i]);
     img.setAttribute("alt", alt);
 
     if (i % 2 == 0) {
@@ -35,7 +34,6 @@ function loadImages(data) {
     var img_big = document.createElement("img");
     img_big.src = img_path;
     img_big.setAttribute("title", credits);
-    // img_big.setAttribute("style", "height: 75vh");
     img_big.setAttribute("alt", alt);
 
     slide.appendChild(numbertext);
@@ -71,7 +69,6 @@ function closeModal() {
 }
 
 var slideIndex = 1;
-// showSlides(slideIndex);
 
 function plusSlides(n) {
   showSlides(slideIndex += n);

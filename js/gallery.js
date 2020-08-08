@@ -99,12 +99,12 @@ function showSlides(n) {
   }
   var current_image = slides[slideIndex-1].getElementsByTagName("img")[0];
   if (current_image.clientWidth > 0.75 * screen.width) {
-    current_image.style.max-width = "75vw";
-    current_image.style.height = "auto";
+    current_image.setAttribute("max-width", "75vw");
+    current_image.setAttribute("height", "auto");
   }
   else if (current_image.clientHeight > 0.75 * screen.height) {
-    current_image.style.max-height = "75vh";
-    current_image.style.width = "auto";
+    current_image.setAttribute("max-height", "75vh");
+    current_image.setAttribute("width", "auto");
   }
   captionText.innerHTML = current_image.title;
 }

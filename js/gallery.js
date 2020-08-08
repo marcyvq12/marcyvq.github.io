@@ -107,6 +107,7 @@ function showSlides(n) {
       current_image.setAttribute("max-height", "75vh");
       current_image.setAttribute("width", "auto");
     }
+    console.log(wh);
   }
   else if (current_image.clientWidth > 0.75 * screen.width) {
     current_image.setAttribute("max-width", "75vw");

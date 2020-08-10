@@ -23,6 +23,14 @@
 	padding-right: 10px;
 }
 
+.socialicons-bar img {
+  width: 30px;
+}
+
+.socialicons-bar a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 500px) {
 	.ftitle {
 		font-size: 25px;

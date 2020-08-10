@@ -167,3 +167,20 @@ img.hover-shadow {
     margin-right: 2%;
     padding: 10px;
   }
+
+  .column {
+    padding: 10px;
+  }
+
+  #col1 {
+    padding-left: 20px;
+  }
+
+  #col2 {
+    padding-right: 20px;
+  }
+
+  .row img {
+    margin-bottom: 20px;
+  }
+}

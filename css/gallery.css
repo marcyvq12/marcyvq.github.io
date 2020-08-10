@@ -20,14 +20,15 @@ body {
 .column {
   float: left;
   width: 50%;
-  padding: 20px;
 }
 
 #col1 {
+  padding: 20px;
   padding-left: 40px;
 }
 
 #col2 {
+  padding: 20px;
   padding-right: 40px;
 }
 
@@ -177,15 +178,13 @@ img.hover-shadow {
     padding: 10px;
   }
 
-  .column {
-    padding: 10px;
-  }
-
   #col1 {
+    padding: 10px;
     padding-left: 20px;
   }
 
   #col2 {
+    padding: 10px;
     padding-right: 20px;
   }
 

@@ -42,6 +42,7 @@ body {
 @media screen and (max-width: 1000px) {
 	#about-img {
 		width: 70vw;
+		padding-left: 8vw;
 	}
 
 	#about {
@@ -49,6 +50,52 @@ body {
 	}
 
 	.box {
-		right: 5vw;
+		right: 3vw;
 	}
 }
+
+@media screen and (max-width: 700px) {
+	#about-title {
+		padding-top: 0;
+		font-size: 15px;
+	}
+
+	#about-img {
+		padding-left: 4vw;
+	}
+
+	#about {
+		font-size: 12px;
+	}
+
+	.box > * {
+		padding: 5px;
+	}
+
+	.box {
+		width: 33vw;
+	}
+}
+
+/*@media screen and (max-width: 500px) {
+	#about-title {
+		padding-top: 0;
+		font-size: 15px;
+	}
+
+	#about-img {
+		padding-left: 4vw;
+	}
+
+	#about {
+		font-size: 12px;
+	}
+
+	.box > * {
+		padding: 5px;
+	}
+
+	.box {
+		width: 33vw;
+	}
+}*/

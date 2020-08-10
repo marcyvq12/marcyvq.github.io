@@ -4,6 +4,14 @@
 	padding-right: 10px;
 }
 
+.socialicons img {
+  width: 30px;
+}
+
+.socialicons a {
+  text-decoration: none;
+}
+
 .title {
 	text-align: center; 
 	display: inline-block; 
@@ -139,7 +147,11 @@
     font-size: 25px;
   }
 
-  .socialicons-bar img {
+  .socialicons-bar {
+    padding-right: 5px;
+  }
+
+  .socialicons img {
     width: 20px;
   }
 }

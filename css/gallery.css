@@ -20,6 +20,15 @@ body {
 .column {
   float: left;
   width: 50%;
+  padding: 20px;
+}
+
+#col1 {
+  padding-left: 40px;
+}
+
+#col2 {
+  padding-right: 40px;
 }
 
 /* The Modal (background) */

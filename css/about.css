@@ -52,6 +52,11 @@ body {
 	.box {
 		right: 3vw;
 	}
+
+	#about-title {
+		padding-top: 10px; 
+		font-size: 20px;
+	}
 }
 
 @media screen and (max-width: 700px) {
@@ -81,12 +86,15 @@ body {
 
 @media screen and (max-width: 500px) {
 	#about-title {
-		font-size: 14px;
+		font-size: 11px;
 	}
 
-	#about-img {
-		padding-left: 4vw;
-	}
+	/*#about-img {
+		width: 300px;
+		height: 500px;
+		object-fit: cover;
+		object-position: 150% 50%;
+	}*/
 
 	#about {
 		font-size: 5px;
@@ -98,6 +106,5 @@ body {
 
 	.box {
 		width: 33vw;
-		overflow: hidden;
 	}
 }

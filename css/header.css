@@ -133,3 +133,13 @@
   	text-indent: 20px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .title a {
+    font-size: 25px;
+  }
+
+  .socialicons-bar img {
+    width: 20px;
+  }
+}

@@ -4,11 +4,11 @@
 	padding-right: 10px;
 }
 
-.socialicons img {
+.socialicons-bar > img {
   width: 30px;
 }
 
-.socialicons a {
+.socialicons-bar > a {
   text-decoration: none;
 }
 

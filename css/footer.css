@@ -36,4 +36,8 @@
 		font-size: 25px;
 		padding-left: 5px;
 	}
+
+	.foot-container {
+		padding-top: 32px;
+	}
 }

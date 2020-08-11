@@ -2,8 +2,19 @@ body {
 	font-family: Helvetica, sans-serif;
 }
 
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
 .about-container {
 	position: static;
+	min-height: 100%;
+}
+
+#footer {
+	height: 79px;
+	margin-top: -79px;
 }
 
 #about-img {

@@ -2,6 +2,16 @@ body {
 	font-family: Helvetica, sans-serif;
 }
 
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.contact-content {
+  position: static;
+  min-height: calc(100% - 90px - 20px - 79px);  /* For sticky header, change later */
+}
+
 .contact-container {
 	display: inline-block;
   position: absolute;

@@ -9,13 +9,9 @@ html, body {
 
 .about-container {
 	position: static;
-	min-height: calc(100% - 90px - 20px - 79px);
+	min-height: calc(100% - 90px - 20px - 79px); /* For sticky header, change later */
 }
 
-/*#footer {
-	height: 79px;
-	margin-top: -79px;
-}*/
 
 #about-img {
 	width : 60vw;

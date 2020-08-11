@@ -9,13 +9,13 @@ html, body {
 
 .about-container {
 	position: static;
-	min-height: 100%;
+	min-height: 70%;
 }
 
-#footer {
+/*#footer {
 	height: 79px;
 	margin-top: -79px;
-}
+}*/
 
 #about-img {
 	width : 60vw;

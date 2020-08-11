@@ -9,7 +9,7 @@ html, body {
 
 .about-container {
 	position: static;
-	min-height: 70%;
+	min-height: calc(100% - 90px - 20px - 79px);
 }
 
 /*#footer {

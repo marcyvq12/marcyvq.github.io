@@ -1,3 +1,7 @@
+body {
+  min-height: 70px;
+}
+
 .socialicons-bar {
 	float: right; 
 	display: block;
@@ -16,6 +20,8 @@
 	text-align: center; 
 	display: inline-block; 
 	padding-top: 20px;
+  z-index: 9000;
+  position: absolute;
 }
 
 .title a {
@@ -38,6 +44,7 @@
 	font-family: Helvetica;
 	padding-top: 40px;
 	padding-bottom: 10px;
+  margin-left: 250px;
 }
 
 .nav-bar a {
@@ -100,6 +107,13 @@
     float: right;
     display: block;
   }
+
+  .nav-bar {
+    position: absolute;
+    top: -5px;
+    left: calc(300px - 45.5px);
+    margin: 0;
+  }
 }
 @media screen and (max-width: 1000px) {
   .nav-bar.responsive {
@@ -107,7 +121,7 @@
   	background-color: white;
   	display: block;
   	left:0;
-  	/*margin-top: -50px;*/
+  	margin-top: 45px;
   	width: 300px;
   	z-index: 1000;
   	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -115,8 +129,8 @@
   .nav-bar.responsive a.icon {
     position: absolute;
     right: 0;
-    top: 0;
-    padding-top: 20px;
+    top: -5px;
+    /*padding-top: 20px;*/
   }
   .nav-bar.responsive a {
     float: none;
@@ -125,7 +139,7 @@
   }
 
   .nav-bar.responsive .dropdown {float: none;
-  width: 300px;}
+  width: 260px;}
   .nav-bar.responsive .dropdown-content {
   	position: relative;
   	box-shadow: none;
@@ -153,5 +167,17 @@
 
   .socialicons-bar img {
     width: 20px;
+  }
+
+  .nav-bar {
+    left: 180px;
+    padding-top: 25px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .nav-bar.responsive {
+    width: 225px;
+    top: -18px;
   }
 }

@@ -2,6 +2,10 @@ body {
   min-height: 70px;
 }
 
+#header {
+  height: 70px;
+}
+
 .socialicons-bar {
 	float: right; 
 	display: block;
@@ -110,7 +114,7 @@ body {
 
   .nav-bar {
     position: absolute;
-    top: -5px;
+    top: -20px;
     left: calc(300px - 45.5px);
     margin: 0;
   }

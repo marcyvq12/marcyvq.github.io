@@ -122,7 +122,7 @@
   	display: block;
   	left:0;
   	margin-top: 45px;
-  	width: 300px;
+  	width: 320px;
   	z-index: 1000;
   	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   }
@@ -170,8 +170,8 @@
   }
 
   .nav-bar {
-    left: 165px;
-    padding-top: 25px;
+    left: 167px;
+    padding-top: 35px;
   }
 
   .nav-bar a.icon {

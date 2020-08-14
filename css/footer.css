@@ -16,18 +16,18 @@
 	color: #000000;
 }
 
-.socialicons-bar {
+.foot-socialicons-bar {
 	right: 0;
 	position: absolute;
 	display: inline-block;
 	padding-right: 10px;
 }
 
-.socialicons-bar img {
+.foot-socialicons-bar img {
   width: 30px;
 }
 
-.socialicons-bar a {
+.foot-socialicons-bar a {
   text-decoration: none;
 }
 
@@ -39,5 +39,9 @@
 
 	.foot-container {
 		padding-top: 32px;
+	}
+
+	.foot-socialicons-bar img {
+		width: 20px;
 	}
 }

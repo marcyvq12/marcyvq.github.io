@@ -3,6 +3,11 @@
 	margin: 0;
 }
 
+#content {
+	position: static;
+	min-height: calc(100% - 156px); /* For sticky footer, change later */
+}
+
 .foot-container {
 /* 		position: fixed;  */
 	padding-top: 20px;

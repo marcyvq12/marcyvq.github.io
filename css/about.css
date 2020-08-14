@@ -7,12 +7,6 @@ html, body {
 	margin: 0;
 }
 
-.about-container {
-	position: static;
-	min-height: calc(100% - 90px - 20px - 79px); /* For sticky footer, change later */
-}
-
-
 #about-img {
 	width : 60vw;
 	padding-left: 10vw;

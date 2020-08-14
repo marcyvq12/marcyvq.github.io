@@ -7,11 +7,6 @@ html, body {
   margin: 0;
 }
 
-.contact-content {
-  position: static;
-  min-height: calc(100% - 86px - 20px - 79px);  /* For sticky footer, change later */
-}
-
 .contact-container {
 	display: inline-block;
   position: absolute;

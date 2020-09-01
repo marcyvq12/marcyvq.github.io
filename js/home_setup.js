@@ -1,4 +1,5 @@
 function home_setup() {
+	console.write("we up in here");
 	var modeling = document.getElementById("modeling");
 	var ropeart = document.getElementById("ropeart");
 	var mod_img = modeling.getElementsByTagName("img");

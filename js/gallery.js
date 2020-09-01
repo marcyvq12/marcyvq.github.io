@@ -1,3 +1,12 @@
+function loadCSV(path) {
+  d3.csv(path).then(function(data) {
+  data.forEach(row => {
+      const field =  row["column_name"];
+  });
+  return data;
+});
+}
+
 function loadImages(path) {
   var col1 = document.getElementById("col1");
   var col2 = document.getElementById("col2");
@@ -41,15 +50,6 @@ function loadImages(path) {
     slide.appendChild(img_big);
     modal_content.insertBefore(slide, captionbox);
   }
-}
-
-function loadCSV(path) {
-  d3.csv(path).then(function(data) {
-  data.forEach(row => {
-      const field =  row["column_name"];
-  });
-});
-  return data;
 }
 
 document.addEventListener("keydown", function(event) {

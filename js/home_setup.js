@@ -5,7 +5,7 @@ function home_setup() {
 	var rope_img = ropeart.getElementsByTagName("img")[0];
 	mod_height = mod_img.clientHeight;
 	rope_height = rope_img.clientHeight;
-	modeling.style.height = mod_height;
-	ropeart.style.height = rope_height;
-	console.log(mod_height);
+	modeling.style.height = mod_height.toString().concat("px");
+	ropeart.style.height = rope_height.toString().concat("px");
+	console.log(modeling.style.height);	
 }

@@ -1,9 +1,10 @@
-function loadImages(data) {
+function loadImages(path) {
   var col1 = document.getElementById("col1");
   var col2 = document.getElementById("col2");
   var modal_content = document.getElementById("modalcontent");
   var captionbox = document.getElementById("captionbox");
 
+  data = loadCSV(path);
   var numimages = data.length;
   for (i=0; i < numimages; i++) {
     fname = data[i]['fname'];
@@ -47,8 +48,8 @@ function loadCSV(path) {
   data.forEach(row => {
       const field =  row["column_name"];
   });
-  loadImages(data);
 });
+  return data;
 }
 
 document.addEventListener("keydown", function(event) {

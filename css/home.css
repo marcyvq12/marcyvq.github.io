@@ -13,14 +13,9 @@ html, body {
 	width: auto;
 	display: grid;
  	padding: 60px;
- 	grid-template-rows: 5% 1fr;
-  	grid-template-columns: 60% 1fr 20%;
+ 	grid-template-rows: 5% 1fr 60%;
+  	grid-template-columns: 10% 1fr 40%;
 }
-
-/*.page-ref * {
-	grid-row-start: 1;
-	grid-column-start: 1;
-}*/
 
 #modeling {
 	padding-bottom: 0;
@@ -29,24 +24,31 @@ html, body {
 .ex-img {
 	width: 75vw;
 	grid-row-start: 1;
-	grid-column-start: 1;
 }
 
 .box {
 	background-color: rgba(100,100,100);
 	width: 30vw;
-	height: 300px;
-	grid-column-start: 2;
+	height: 40vh;
 	top: 20px;
-	grid-row-start: 2;
 }
 
 #modeling .ex-img {
-	float: left;
+	grid-column-start: 1;
+}
+
+#modeling .box {
+	grid-column-start: 3;
+	grid-row-start: 2;
 }
 
 #ropeart .ex-img {
-	float: right;
+	grid-column-start: 2;
+}
+
+#ropeart .box {
+	grid-column-start: 1;
+	grid-row-start: 3;
 }
 
 @media screen and (max-width: 500px) {

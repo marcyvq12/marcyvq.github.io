@@ -6,6 +6,7 @@ function loadCSV(path) {
   console.log(data[0]);
   return data;
 });
+  console.log(data);
 }
 
 function loadImages(path) {

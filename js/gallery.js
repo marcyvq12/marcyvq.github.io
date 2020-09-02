@@ -3,6 +3,7 @@ function loadCSV(path) {
   data.forEach(row => {
       const field =  row["column_name"];
   });
+  console.write(data[0]);
   return data;
 });
 }
@@ -14,6 +15,7 @@ function loadImages(path) {
   var captionbox = document.getElementById("captionbox");
 
   data = loadCSV(path);
+  console.write(data[0]);
   var numimages = data.length;
   for (i=0; i < numimages; i++) {
     fname = data[i]['fname'];

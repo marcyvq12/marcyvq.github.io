@@ -1,5 +1,5 @@
 function loadCSV(path) {
-  d3.csv(path).then(function(data) {
+  data = d3.csv(path).then(function(data) {
   data.forEach(row => {
       const field =  row["column_name"];
   });

@@ -7,6 +7,28 @@ html, body {
 	margin: 0;
 }
 
+.intro {
+	font-size: 20px;
+	display: block;
+	margin: auto;
+	text-align: center;
+	padding-top: 30px;
+}
+
+button {
+	display: block;
+	font-size: 24px;
+	background-color: rgba(180,180,180);
+	border: none;
+	text-align: center;
+	padding: 14px 22px;
+	margin: auto;
+}
+
+button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
+}
+
 .page-ref {
 	margin: 0;
 	/*position: relative;*/
@@ -27,10 +49,20 @@ html, body {
 }
 
 .box {
-	background-color: rgba(100,100,100);
+	background-color: rgba(170,170,170);
 	width: 30vw;
-	height: 40vh;
+	/*height: 40vh;*/
 	top: 20px;
+}
+
+.box h2 {
+	padding-left: 10px;
+}
+
+.box p {
+	font-size: 16px;
+	padding: 10px;
+	padding-top: 0;
 }
 
 #modeling .ex-img {

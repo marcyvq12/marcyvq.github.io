@@ -1,21 +1,9 @@
-function loadCSV(path) {
-  d3.csv(path).then(data = function(data) {
-  data.forEach(row => {
-      const field =  row["column_name"];
-  });
-  return data;
-});
-  console.log(data);
-}
-
-function loadImages(path) {
+function loadImages(data) {
   var col1 = document.getElementById("col1");
   var col2 = document.getElementById("col2");
   var modal_content = document.getElementById("modalcontent");
   var captionbox = document.getElementById("captionbox");
 
-  data = loadCSV(path);
-  console.log(data[0]);
   var numimages = data.length;
   for (i=0; i < numimages; i++) {
     fname = data[i]['fname'];
@@ -52,6 +40,22 @@ function loadImages(path) {
     slide.appendChild(img_big);
     modal_content.insertBefore(slide, captionbox);
   }
+}
+
+function loadCSV(path) {
+  promise = d3.csv(path).then(function(data) {
+  data.forEach(row => {
+      const field =  row["column_name"];
+  });
+  return data;
+});
+  return promise;
+}
+
+function importImages(path) {
+  loadCSV(path).then(function(data) {
+    loadImages(data);
+  });
 }
 
 document.addEventListener("keydown", function(event) {

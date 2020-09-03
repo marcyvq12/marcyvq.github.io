@@ -35,13 +35,10 @@ setupVid();
 }
 
 
-function loadCSV_vid(path) {
-  d3.csv(path).then(function(data) {
-  data.forEach(row => {
-      const field =  row["column_name"];
+function importVideo(path) {
+    loadCSV(path).then(function(data) {
+    loadVideos(data);
   });
-  loadVideos(data);
-});
 }
 
 /* Light YouTube Embeds by @labnol */

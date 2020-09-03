@@ -12,7 +12,7 @@ html, body {
 	display: block;
 	margin: auto;
 	text-align: center;
-	padding-top: 30px;
+	padding: 20px 40px;
 }
 
 button {
@@ -86,5 +86,14 @@ button:hover {
 @media screen and (max-width: 500px) {
 	.page-ref {
 		padding: 30px;
+	}
+
+	.box {
+		width: 37vw;
+	}
+
+	.intro {
+		font-size: 20px;
+		padding: 15px 30px;
 	}
 }

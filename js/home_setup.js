@@ -4,12 +4,12 @@ function setCategoryHeights() {
 		var img = page.getElementsByTagName("img")[0];
 		var img_height = img.clientHeight;
 		page.style.height = img_height.toString().concat("px");
+		page.style.height = "800px";
 	}
 }
 
 function unpack_config(data) {
 	var intro_text = document.getElementsByClassName("intro")[0].getElementsByTagName("p")[0];
-	// var pages = document.getElementsByClassName("page-ref");
 
 	numcats = data.length;
 	for (i=0; i < numcats; i++) {

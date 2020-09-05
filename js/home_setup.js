@@ -4,7 +4,6 @@ function setCategoryHeights() {
 		var img = page.getElementsByTagName("img")[0];
 		var img_height = img.clientHeight;
 		page.style.height = img_height.toString().concat("px");
-		page.style.height = "800px";
 	}
 }
 

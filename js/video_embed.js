@@ -84,11 +84,7 @@ function labnolIframe() {
 // For vimeo embeds:
 
 function vimeoLoadingThumb(id){    
-    var url = "https://vimeo.com/api/v2/video/" + id + ".json";
-    // ?callback=showThumb";
-    $.getJSON(url, function(data){
-    console.log(data);
-    });
+    var url = "https://vimeo.com/api/v2/video/" + id + ".json?callback=showThumb";
     
     var script = document.createElement( 'script' );
     script.type = 'text/javascript';

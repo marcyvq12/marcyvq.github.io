@@ -35,7 +35,7 @@ button:hover {
 	width: auto;
 	display: grid;
  	padding: 60px;
- 	grid-template-rows: 5% 1fr 60%;
+ 	grid-template-rows: 5% 40% 40% 1fr;
   	grid-template-columns: 10% 1fr 40%;
 }
 
@@ -86,6 +86,11 @@ button:hover {
 @media screen and (max-width: 500px) {
 	.page-ref {
 		padding: 30px;
+		grid-template-rows: 5% 40% 40% 1fr;
+	}
+
+	#ropeart {
+		padding-left: 20px;
 	}
 
 	.box {
@@ -96,5 +101,9 @@ button:hover {
 	.intro {
 		font-size: 20px;
 		padding: 15px 30px;
+	}
+
+	button {
+		font-size: 20px;
 	}
 }

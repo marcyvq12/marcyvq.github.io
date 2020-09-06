@@ -84,7 +84,7 @@ function labnolIframe() {
 // For vimeo embeds:
 
 function vimeoLoadingThumb(id){    
-    var url = "http://vimeo.com/api/v2/video/" + id + ".json?callback=showThumb";
+    var url = "https://vimeo.com/api/v2/video/" + id + ".json?callback=showThumb";
     
     var script = document.createElement( 'script' );
     script.type = 'text/javascript';

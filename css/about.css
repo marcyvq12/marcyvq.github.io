@@ -90,15 +90,12 @@ html, body {
 		font-size: 11px;
 	}
 
-	/*#about-img {
-		width: 300px;
-		height: 500px;
-		object-fit: cover;
-		object-position: 150% 50%;
-	}*/
+	#about-img {
+		width: 90vw;
+	}
 
 	#about {
-		font-size: 5px;
+		font-size: 7px;
 	}
 
 	.box > * {
@@ -106,6 +103,7 @@ html, body {
 	}
 
 	.box {
-		width: 33vw;
+		width: 40vw;
+		top: 120px;
 	}
 }

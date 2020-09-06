@@ -124,7 +124,7 @@ input[type=submit]:hover {
   }
 
   input[type=text], select, textarea {
-    padding: 0;
+    padding: 4px;
     margin: 0;
     font-size: 2vw;
   }

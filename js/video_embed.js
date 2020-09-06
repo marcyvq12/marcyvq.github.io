@@ -18,9 +18,11 @@ function loadVideos(data) {
 
     var vid_embed = document.createElement("div");
     vid_embed.setAttribute("class", "vid-embed");
+
     var yt_embed = document.createElement("div");
     yt_embed.setAttribute("class", "youtube-player");
     yt_embed.setAttribute("data-id", data[i]["vid_id"]);
+    yt_embed.setAttribute("data-site", data[i]["site"]);
     vid_embed.appendChild(yt_embed);
 
     video_div.appendChild(vid_title);
@@ -53,8 +55,14 @@ function setupVid() {
         for (n = 0; n < v.length; n++) {
             div = document.createElement("div");
             div.setAttribute("data-id", v[n].dataset.id);
-            div.innerHTML = labnolThumb(v[n].dataset.id);
-            div.onclick = labnolIframe;
+            var site = v[n].dataset.site;
+            if (site == "youtube") {
+                div.innerHTML = labnolThumb(v[n].dataset.id);
+                div.onclick = labnolIframe;
+            }
+            else if (site == "vimeo") {
+                vimeoLoadingThumb(v[n].dataset.id);
+            }
             v[n].appendChild(div);
         }
     }
@@ -72,3 +80,23 @@ function labnolIframe() {
     iframe.setAttribute("allowfullscreen", "1");
     this.parentNode.replaceChild(iframe, this);
 }
+
+// For vimeo embeds:
+
+function vimeoLoadingThumb(id){    
+    var url = "http://vimeo.com/api/v2/video/" + id + ".json?callback=showThumb";
+    
+    var script = document.createElement( 'script' );
+    script.type = 'text/javascript';
+    script.src = url;
+
+    $('*[data-id=' + id +']').before(script);
+}
+
+function showThumb(data){
+    var id = data[0].id;
+    console.log(data[0].thumbnail_medium);
+    $('*[data-id=' + id +']').attr('src',data[0].thumbnail_medium);
+}
+
+vimeoLoadingThumb(455311866);

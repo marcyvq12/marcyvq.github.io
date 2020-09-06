@@ -111,7 +111,7 @@
   .nav-bar {
     position: absolute;
     top: -20px;
-    left: calc(300px - 45.5px);
+    left: 275px;
     margin: 0;
   }
 }
@@ -170,7 +170,7 @@
   }
 
   .nav-bar {
-    left: 167px;
+    left: 188px;
     padding-top: 35px;
   }
 
@@ -184,5 +184,9 @@
   .nav-bar.responsive {
     width: 225px;
     top: -25px;
+  }
+
+  .nav-bar.responsive .dropdown {
+    width: 170px;
   }
 }

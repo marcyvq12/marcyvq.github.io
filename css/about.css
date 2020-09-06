@@ -91,7 +91,7 @@ html, body {
 	}
 
 	#about-img {
-		width: 90vw;
+		width: 100vw;
 		object-fit: cover;
 		object-position: -10vw 0;
 	}

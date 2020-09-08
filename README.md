@@ -12,8 +12,8 @@
 - [x] about page mobile version
 - [x] format dropdown nav mobile version
 - [x] home page (design)
+- [x] vimeo embeds
 - [ ] fix about.css
-- [ ] vimeo embeds
 - [ ] change gallery captions
 - [ ] header visible with scroll up
 - [ ] transitions

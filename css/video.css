@@ -3,7 +3,7 @@ body {
   margin: 0;
 }
 
-.youtube-player {
+.video-player {
     position: relative;
     padding-bottom: 56.23%;
     height: 0;
@@ -13,9 +13,9 @@ body {
     margin: 5px;
 }
 
-.youtube-player iframe,
-.youtube-player object,
-.youtube-player embed {
+.video-player iframe,
+.video-player object,
+.video-player embed {
     position: absolute;
     top: 0;
     left: 0;
@@ -25,7 +25,7 @@ body {
     background: transparent;
 }
 
-.youtube-player img {
+.video-player img {
     bottom: 0;
     display: block;
     left: 0;
@@ -43,11 +43,11 @@ body {
     transition: .4s all;
 }
 
-.youtube-player img:hover {
+.video-player img:hover {
     -webkit-filter: brightness(75%);
 }
 
-.youtube-player .play {
+.video-player .play {
     height: 72px;
     width: 72px;
     left: 50%;

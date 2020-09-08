@@ -20,7 +20,7 @@ function loadVideos(data) {
     vid_embed.setAttribute("class", "vid-embed");
 
     var yt_embed = document.createElement("div");
-    yt_embed.setAttribute("class", "youtube-player");
+    yt_embed.setAttribute("class", "video-player");
     yt_embed.setAttribute("data-id", data[i]["vid_id"]);
     yt_embed.setAttribute("data-site", data[i]["site"]);
     vid_embed.appendChild(yt_embed);
@@ -51,30 +51,30 @@ document.addEventListener("DOMContentLoaded", setupVid());
 
 function setupVid() {
         var div, n,
-            v = document.getElementsByClassName("youtube-player");
+            v = document.getElementsByClassName("video-player");
         for (n = 0; n < v.length; n++) {
             div = document.createElement("div");
             div.setAttribute("data-id", v[n].dataset.id);
             var site = v[n].dataset.site;
             if (site == "youtube") {
-                div.innerHTML = labnolThumb(v[n].dataset.id);
-                div.onclick = labnolIframe;
+                div.innerHTML = youtubeThumb(v[n].dataset.id);
+                div.onclick = youtubeIframe;
             }
             else if (site == "vimeo") {
-                vimeoLoadingThumb(div, v[n].dataset.id);
+                vimeoThumb(div, v[n].dataset.id);
                 div.onclick = vimeoIframe;
             }
             v[n].appendChild(div);
         }
     }
 
-function labnolThumb(id) {
+function youtubeThumb(id) {
     var thumb = '<img src="https://i.ytimg.com/vi/ID/hqdefault.jpg">',
         play = '<div class="play"></div>';
     return thumb.replace("ID", id) + play;
 }
 
-function labnolIframe() {
+function youtubeIframe() {
     var iframe = document.createElement("iframe");
     iframe.setAttribute("src", "https://www.youtube.com/embed/" + this.dataset.id + "?autoplay=1");
     iframe.setAttribute("frameborder", "0");
@@ -84,9 +84,8 @@ function labnolIframe() {
 
 // For vimeo embeds:
 
-function vimeoLoadingThumb(div, id){    
+function vimeoThumb(div, id){    
     var url = "https://vimeo.com/api/v2/video/" + id + ".json";
-    // ?callback=showThumb";
     
     var thumb = '<img src="THUMB">',
         play = '<div class="play"></div>';

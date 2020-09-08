@@ -61,7 +61,7 @@ function setupVid() {
                 div.onclick = labnolIframe;
             }
             else if (site == "vimeo") {
-                vimeoLoadingThumb(v[n].dataset.id);
+                div.innerHTML = vimeoLoadingThumb(v[n].dataset.id);
                 div.onclick = vimeoIframe;
             }
             v[n].appendChild(div);
@@ -84,14 +84,18 @@ function labnolIframe() {
 
 // For vimeo embeds:
 
-function vimeoLoadingThumb(div, id){    
+function vimeoLoadingThumb(id){    
     var url = "https://vimeo.com/api/v2/video/" + id + ".json";
     // ?callback=showThumb";
     
+    var thumb = '<img src="THUMB">',
+        play = '<div class="play"></div>';
     $.getJSON(url, function(data){
         console.log(data);
-        div.innerHTML = data[0].thumbnail_medium;
+        thumb = thumb.replace("THUMB", data[0].thumbnail_large);
     });
+    console.log(thumb);
+    return thumb + play;
 }
 
 function vimeoIframe(){

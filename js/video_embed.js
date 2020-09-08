@@ -86,21 +86,9 @@ function labnolIframe() {
 function vimeoLoadingThumb(id){    
     var url = "https://vimeo.com/api/v2/video/" + id + ".json";
     // ?callback=showThumb";
+    
     $.getJSON(url, function(data){
     console.log(data);
-    });
-    
-    var script = document.createElement( 'script' );
-    script.type = 'text/javascript';
-    script.src = url;
-
-    $('*[data-id=' + id +']').before(script);
-}
-
-function showThumb(data){
-    var id = data[0].id;
-    console.log(data[0].thumbnail_medium);
     $('*[data-id=' + id +']').attr('src',data[0].thumbnail_medium);
+    });
 }
-
-vimeoLoadingThumb(455330447);

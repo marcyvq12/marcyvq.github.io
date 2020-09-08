@@ -87,7 +87,7 @@ function vimeoLoadingThumb(id){
     var url = "https://vimeo.com/api/v2/video/" + id + ".json";
     // ?callback=showThumb";
     $.getJSON(url, function(data){
-    alert(data);
+    console.log(data);
     });
     
     var script = document.createElement( 'script' );

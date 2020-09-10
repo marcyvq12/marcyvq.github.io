@@ -8,13 +8,14 @@ html, body {
 }
 
 .pages-container {
-	padding-top: 30px;
+	padding-top: 50px;
 }
 
 .page {
-	padding-bottom: 30px;
+	margin-bottom: 50px;
 	position: relative;
 	text-align: center;
+
 }
 
 .page a {
@@ -23,9 +24,21 @@ html, body {
 
 .page img {
 	height: 100%;
-	width: 80vw;
+	width: 
 
 }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
 
 .page-title {
 	position: absolute;
@@ -37,3 +50,7 @@ html, body {
   	color: white;
   	text-shadow: 0 3px 4px black;
   }
+
+ .page:hover .overlay {
+ 	opacity: .5;
+ }

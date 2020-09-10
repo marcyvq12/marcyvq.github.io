@@ -10,6 +10,9 @@ function loadPages(data) {
     var link = document.createElement("a");
     link.href = data[i]['page_name'];
 
+    var overlay = document.createElement("div");
+    overlay.setAttribute("class", "overlay");
+
     var img = document.createElement("img");
     img.src = imgpath_head + data[i]['img_path'];
 
@@ -18,7 +21,9 @@ function loadPages(data) {
     title.innerHTML = data[i]['title'];
 
     link.appendChild(img);
+    link.appendChild(overlay);
     link.appendChild(title);
+
 
     page.appendChild(link);
     container.appendChild(page);

@@ -65,11 +65,11 @@ html, body {
 
 @media screen and (max-width: 500px) {
   #pages-container {
-    padding-top: 30px;
+    padding-top: 20px;
   }
 
   .page {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     width: 90vw;
 	  margin-left: 5vw;
   }

@@ -17,7 +17,7 @@ html, body {
 	position: relative;
 	text-align: center;
   width: 80vw;
-  /*margin-left: 10vw;*/
+  margin-left: 10vw;
 }
 
 .page a {

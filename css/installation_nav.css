@@ -12,7 +12,6 @@ html, body {
 }
 
 .page {
-	padding-left: 10vw;
 	padding-bottom: 30px;
 	position: relative;
 	text-align: center;
@@ -25,7 +24,7 @@ html, body {
 .page img {
 	height: 100%;
 	width: 80vw;
-	
+
 }
 
 .page-title {
@@ -37,3 +36,4 @@ html, body {
   	font-weight: bold;
   	color: white;
   	text-shadow: 0 3px 4px black;
+  }

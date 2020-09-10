@@ -1,0 +1,30 @@
+body {
+	font-family: Helvetica, sans-serif;
+}
+
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+.page {
+	width: 80vw;
+	padding-left: 10vw;
+	position: relative;
+	text-align: center;
+}
+
+.page a {
+	text-decoration: none;
+}
+
+.page img {
+	height: 100%;
+}
+
+.page-title {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}

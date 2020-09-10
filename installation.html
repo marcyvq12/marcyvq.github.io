@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="./css/installation_nav.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $("#header").load("./header.html");
+  $('#footer').load("./footer.html");
+});
+  </script>
+</head>
+
+<body onload="setupInstallations('./config/installation_config.csv')">
+<div id="header"></div>
+
+<div id="content">
+<div id="pages-container"></div>
+</div>
+
+<div id="footer"></div>
+
+<script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+<script src="./js/loadCSV.js"></script>
+<script src="./js/installation_nav.js"></script>
+</body>
+</html>

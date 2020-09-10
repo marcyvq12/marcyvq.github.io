@@ -7,7 +7,7 @@ html, body {
 	margin: 0;
 }
 
-.pages-container {
+#pages-container {
 	padding-top: 50px;
   text-align: center;
 }
@@ -17,7 +17,7 @@ html, body {
 	position: relative;
 	text-align: center;
   width: 80vw;
-
+  /*margin-left: 10vw;*/
 }
 
 .page a {

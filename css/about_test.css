@@ -58,6 +58,14 @@ html, body {
   	text-shadow: 5px 5px 4px black; 
 }
 
-#header {
-	z-index: 9999;
-	margin-bottom:20px;}
+@media screen and (max-width: 500px) {
+	.images {
+		margin-bottom: -2%;
+		width: 90vw;
+		margin-left: 5vw;
+	}
+
+	#about {
+		padding: 20px;
+	}
+}

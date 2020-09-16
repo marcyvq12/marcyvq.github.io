@@ -14,7 +14,7 @@
 - [x] home page (design)
 - [x] vimeo embeds
 - [x] events page
-- [x] style google calendar
+- [ ] style google calendar
 - [ ] about page parallax scroll
 - [ ] change gallery captions
 - [ ] header visible with scroll up

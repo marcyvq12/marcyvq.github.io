@@ -13,9 +13,10 @@
 - [x] format dropdown nav mobile version
 - [x] home page (design)
 - [x] vimeo embeds
-- [ ] fix about.css
+- [x] events page
+- [ ] style google calendar
+- [ ] about page parallax scroll
 - [ ] change gallery captions
 - [ ] header visible with scroll up
 - [ ] transitions
-- [ ] events page
 - [ ] installation pages

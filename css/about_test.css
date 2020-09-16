@@ -32,7 +32,7 @@ html, body {
 
 #about {
 	font-size: 2.7vw;
-	background-color: rgba(0,0,0,0.1);
+	background-color: rgba(255,255,255,0.5);
 	padding: 40px;
 	margin: 0;
 	color: black;
@@ -55,7 +55,7 @@ html, body {
 	text-align: center;
 	font-weight: bold;
   	color: white;
-  	text-shadow: 5px 5px 4px black; 
+  	text-shadow: 0 0 8px black; 
 }
 
 @media screen and (max-width: 500px) {

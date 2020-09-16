@@ -18,8 +18,9 @@
       else {
         var addon = 'showDate=1&amp;mode=MONTH';
       }
-      cal.src = cal.src + addon;
-    }
+      var og_src = cal.src;
+      cal.attr('src', og_src + addon);
+    })
 });
 });
   </script>

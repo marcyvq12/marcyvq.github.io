@@ -14,8 +14,10 @@
 - [x] home page (design)
 - [x] vimeo embeds
 - [x] events page
+- [x] about page redo
+- [ ] rewrite about
+- [ ] video title on bottom
 - [ ] style google calendar
-- [ ] about page parallax scroll
 - [ ] change gallery captions
 - [ ] header visible with scroll up
 - [ ] transitions

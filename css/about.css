@@ -23,7 +23,6 @@ html, body {
 #about-img-middle {
 	background-image: url("../images/about_long_middle.jpg");
 	/* Set a specific height */
-  	min-height: 400px; 
 }
 
 .box {

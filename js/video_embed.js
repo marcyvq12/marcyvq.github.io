@@ -1,6 +1,5 @@
-function loadVideos(data) {
+function loadVideos(data, container) {
   var numvids = data.length;
-  var container = document.getElementById("vid-container");
 
   for (i=0; i < numvids; i++) {
     var video_div = document.createElement("div");
@@ -39,7 +38,8 @@ setupVid();
 
 function importVideo(path) {
     loadCSV(path).then(function(data) {
-    loadVideos(data);
+    var container = document.getElementById("vid-container");
+    loadVideos(data, container);
   });
 }
 

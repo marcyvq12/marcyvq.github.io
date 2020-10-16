@@ -10,9 +10,9 @@ function loadImages(data, container) {
 
   var numimages = data.length;
   for (i=0; i < numimages; i++) {
-    fname = data[i]['fname'];
+    fname = data[i]['img_fname'];
     caption = data[i]['caption'];
-    alt = data[i]['alt'];
+    alt = data[i]['img_alt'];
     folder = data[i]['category'];
     var numstr = (i+1).toString();
     var onclickstr = "openModal();currentSlide(".concat(numstr, ")");

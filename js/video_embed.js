@@ -55,7 +55,7 @@ function setupVid() {
         for (n = 0; n < v.length; n++) {
             div = document.createElement("div");
             div.setAttribute("data-id", v[n].dataset.id);
-            var site = v[n].dataset.vid_site;
+            var site = v[n].dataset.site;
             if (site == "youtube") {
                 div.innerHTML = youtubeThumb(v[n].dataset.id);
                 div.onclick = youtubeIframe;

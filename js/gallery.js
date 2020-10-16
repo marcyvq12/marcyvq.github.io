@@ -1,13 +1,13 @@
-function loadImages(data) {
-  var col1 = document.getElementById("col1");
-  var col2 = document.getElementById("col2");
+function loadImages(data, container) {
+  var col1 = container[0];
+  var col2 = container[1];
   var modal_content = document.getElementById("modalcontent");
   var captionbox = document.getElementById("captionbox");
 
   var numimages = data.length;
   for (i=0; i < numimages; i++) {
     fname = data[i]['fname'];
-    credits = data[i]['credits'];
+    caption = data[i]['caption'];
     alt = data[i]['alt'];
     folder = data[i]['category'];
     var numstr = (i+1).toString();
@@ -15,7 +15,7 @@ function loadImages(data) {
     var img = document.createElement("img");
     var img_path = "images/".concat(folder, "/", fname);
     img.src = img_path;
-    img.setAttribute("title", credits);
+    img.setAttribute("title", caption);
     img.setAttribute("class", "hover-shadow");
     img.setAttribute("onclick", onclickstr);
     img.setAttribute("alt", alt);
@@ -33,7 +33,7 @@ function loadImages(data) {
     numbertext.innerHTML = numstr.concat('/', numimages.toString());
     var img_big = document.createElement("img");
     img_big.src = img_path;
-    img_big.setAttribute("title", credits);
+    img_big.setAttribute("title", caption);
     img_big.setAttribute("alt", alt);
 
     slide.appendChild(numbertext);
@@ -44,7 +44,10 @@ function loadImages(data) {
 
 function importImages(path) {
   loadCSV(path).then(function(data) {
-    loadImages(data);
+    var col1 = document.getElementById("col1");
+    var col2 = document.getElementById("col2");
+    var container = [col1, col2];
+    loadImages(data, container);
   });
 }
 

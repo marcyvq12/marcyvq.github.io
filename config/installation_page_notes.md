@@ -17,7 +17,7 @@ Not sure how this is gonna work yet
 
 # Content types
 
-###All types of content take fields:
+### All types of content take fields:
 * type
 * row
 * width

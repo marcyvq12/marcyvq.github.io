@@ -1,6 +1,10 @@
 function loadImages(data, container) {
-  var col1 = container[0];
-  var col2 = container[1];
+  var columns = false;
+  if (Array.isArray(container)) {
+    var col1 = container[0];
+    var col2 = container[1];
+    columns = true;
+  }
   var modal_content = document.getElementById("modalcontent");
   var captionbox = document.getElementById("captionbox");
 
@@ -20,10 +24,14 @@ function loadImages(data, container) {
     img.setAttribute("onclick", onclickstr);
     img.setAttribute("alt", alt);
 
-    if (i % 2 == 0) {
-      col1.appendChild(img);
+    if (columns) {
+      if (i % 2 == 0) {
+        col1.appendChild(img);
+      } else {
+        col2.appendChild(img);
+      }
     } else {
-      col2.appendChild(img);
+      container.appendChild(img);
     }
 
     var slide = document.createElement("div");

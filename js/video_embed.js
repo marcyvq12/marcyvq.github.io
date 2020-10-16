@@ -22,7 +22,7 @@ function loadVideos(data) {
     var yt_embed = document.createElement("div");
     yt_embed.setAttribute("class", "video-player");
     yt_embed.setAttribute("data-id", data[i]["vid_id"]);
-    yt_embed.setAttribute("data-site", data[i]["site"]);
+    yt_embed.setAttribute("data-site", data[i]["vid_site"]);
     vid_embed.appendChild(yt_embed);
 
     video_div.appendChild(vid_title);
@@ -55,7 +55,7 @@ function setupVid() {
         for (n = 0; n < v.length; n++) {
             div = document.createElement("div");
             div.setAttribute("data-id", v[n].dataset.id);
-            var site = v[n].dataset.site;
+            var site = v[n].dataset.vid_site;
             if (site == "youtube") {
                 div.innerHTML = youtubeThumb(v[n].dataset.id);
                 div.onclick = youtubeIframe;

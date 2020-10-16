@@ -29,8 +29,9 @@
 A simple div for formatting purposes
 
 ### Image
-Clickable image /n
+Clickable image
 On click: gallery modal, show caption
+
 Required fields:
 * caption
 * img_fname
@@ -39,12 +40,14 @@ Required fields:
 
 ### Text
 Header and/or paragraph
+
 Required fields:
 * title AND/OR
 * caption
 
 ### Video
 Embedded video from youtube or vimeo, with title and description
+
 Required fields:
 * title
 * caption

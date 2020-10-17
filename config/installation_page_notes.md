@@ -38,6 +38,8 @@ Required fields:
 * img_alt
 * img_category
 
+If a row contains more than one image, the row becomes a two-column gallery view. Meaning, you can put many images on the same row and it will display as only two images per line.
+
 ### Text
 Header and/or paragraph
 

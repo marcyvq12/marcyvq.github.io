@@ -58,16 +58,17 @@ function makeGallery(row, container) {
 
 function type_selector(element, container) {
     var content_type = element['type'];
-    if (type == 'spacer') {
+    console.log(content_type);
+    if (content_type == 'spacer') {
         makeSpacer(element, container);
     }
-    else if (type == 'text') {
+    else if (content_type == 'text') {
         makeText(element, container);
     }
-    else if (type == 'image') {
+    else if (content_type == 'image') {
         makeImage(element, container);
     }
-    else if (type == 'video') {
+    else if (content_type == 'video') {
         makeVideo(element, container);
     }
 }
@@ -79,14 +80,18 @@ function importProject(path) {
     var numrows = Math.max(data.map(mapper));
     for (i=0; i < numrows; i++) {
         row = data.filter(element => element['row'] == i);
+        console.log(row);
         row_container = document.createElement("div");
+        row_container.setAttribute('class', 'row');
         // First check if the row will be a gallery (special case)
         if (row.length > 1 && checkGallery(row)) {
             makeGallery(row, row_container);
+            console.log('gallery');
         }
         else {
             for (j=0; j<row.length; j++) {
                 type_selector(row[j], row_container);
+                console.log('not gallery');
             }
         }
         container.appendChild(row_container);

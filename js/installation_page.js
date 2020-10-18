@@ -77,10 +77,8 @@ function importProject(path) {
     loadCSV(path).then(function(data) {
     var container = document.getElementById("project-container");
     var numrows = Math.max(...data.map(mapper));
-    for (i=0; i < numrows; i++) {
-        console.log(i);
+    for (i=1; i < numrows+1; i++) {
         var row = data.filter(element => element['row'] == i);
-        console.log(row);
         var row_container = document.createElement("div");
         row_container.setAttribute('class', 'row');
         // First check if the row will be a gallery (special case)
@@ -88,9 +86,10 @@ function importProject(path) {
             makeGallery(row, row_container);
         }
         else {
-            for (j=0; j<row.length; j++) {
-                type_selector(row[j], row_container);
-            }
+            type_selector(row[0], row_container);
+            // for (j=0; j<row.length; j++) {
+            //     type_selector(row[j], row_container);
+            // }
         }
         container.appendChild(row_container);
     }

@@ -77,24 +77,24 @@ function importProject(path) {
     loadCSV(path).then(function(data) {
     var container = document.getElementById("project-container");
     var numrows = Math.max(...data.map(mapper));
-    console.log(data.filter(element => element['row'] == 2));
-    for (i=1; i < 2; i++) {
+    for (i=1; i < 3; i++) {
         var row = data.filter(element => element['row'] == i);
         var row_container = document.createElement("div");
         row_container.setAttribute('class', 'row');
+        container.appendChild(row_container);
         // First check if the row will be a gallery (special case)
         if (row.length > 1 && checkGallery(row)) {
             makeGallery(row, row_container);
         }
         else {
-            console.log(i);
             type_selector(row[0], row_container);
             // for (j=0; j<row.length; j++) {
             //     type_selector(row[j], row_container);
             // }
         }
-        container.appendChild(row_container);
-        console.log(container);
     }
 });
 }
+
+
+document.addEventListener("DOMContentLoaded", setupVid());

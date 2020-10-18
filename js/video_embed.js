@@ -32,7 +32,7 @@ function loadVideos(data, container) {
 
 }
 
-setupVid();
+// setupVid();
 }
 
 
@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", setupVid());
 function setupVid() {
         var div, n,
             v = document.getElementsByClassName("video-player");
-            console.log(v);
         for (n = 0; n < v.length; n++) {
             div = document.createElement("div");
             div.setAttribute("data-id", v[n].dataset.id);
@@ -60,6 +59,7 @@ function setupVid() {
             if (site == "youtube") {
                 div.innerHTML = youtubeThumb(v[n].dataset.id);
                 div.onclick = youtubeIframe;
+                console.log(div);  
             }
             else if (site == "vimeo") {
                 vimeoThumb(div, v[n].dataset.id);

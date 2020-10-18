@@ -18,6 +18,7 @@ function loadImages(data, container) {
     var onclickstr = "openModal();currentSlide(".concat(numstr, ")");
     var img = document.createElement("img");
     var img_path = "images/".concat(folder, "/", fname);
+    console.log(img_path);
     img.src = img_path;
     img.setAttribute("title", caption);
     img.setAttribute("class", "hover-shadow");

@@ -93,6 +93,7 @@ function importProject(path) {
             // }
         }
         container.appendChild(row_container);
+        console.log(container);
     }
 });
 }

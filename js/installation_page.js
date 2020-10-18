@@ -1,6 +1,5 @@
 function mapper(value) {
-    console.log(value['row']);
-    return value['row'];
+    return parseInt(value['row']);
 }
 
 function checkGallery(row) {

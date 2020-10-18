@@ -58,7 +58,6 @@ function makeGallery(row, container) {
 
 function type_selector(element, container) {
     var content_type = element['type'];
-    console.log(content_type);
     if (content_type == 'spacer') {
         makeSpacer(element, container);
     }
@@ -78,21 +77,19 @@ function importProject(path) {
     loadCSV(path).then(function(data) {
     var container = document.getElementById("project-container");
     var numrows = Math.max(...data.map(mapper));
-    console.log(numrows);
     for (i=0; i < numrows; i++) {
-        row = data.filter(element => element['row'] == i);
+        console.log(i);
+        var row = data.filter(element => element['row'] == i);
         console.log(row);
-        row_container = document.createElement("div");
+        var row_container = document.createElement("div");
         row_container.setAttribute('class', 'row');
         // First check if the row will be a gallery (special case)
         if (row.length > 1 && checkGallery(row)) {
             makeGallery(row, row_container);
-            console.log('gallery');
         }
         else {
             for (j=0; j<row.length; j++) {
                 type_selector(row[j], row_container);
-                console.log('not gallery');
             }
         }
         container.appendChild(row_container);

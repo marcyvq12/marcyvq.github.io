@@ -77,7 +77,7 @@ function importProject(path) {
     loadCSV(path).then(function(data) {
     var container = document.getElementById("project-container");
     var numrows = Math.max(...data.map(mapper));
-    for (i=2; i < 3; i++) {
+    for (i=1; i < 2; i++) {
         console.log(i);
         var row = data.filter(element => element['row'] == i);
         var row_container = document.createElement("div");

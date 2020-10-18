@@ -32,7 +32,7 @@ function loadVideos(data, container) {
 
 }
 
-// setupVid();
+setupVid();
 }
 
 

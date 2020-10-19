@@ -15,7 +15,7 @@ function makeSpacer(element, container) {
     var spacer_div = document.createElement("div");
     spacer_div.setAttribute('class', 'spacer');
     spacer_div.style.width = element['width']+'%';
-    spacer_div.setAttribute("style", element['custom_style']);
+    spacer_div.style.cssText += element['custom_style'];
     container.appendChild(spacer_div);
 }
 
@@ -23,7 +23,7 @@ function makeText(element, container) {
     var text_container = document.createElement("div");
     text_container.setAttribute('class', 'text-container');
     text_container.style.width = element['width']+'%';
-    text_container.setAttribute("style", element['custom_style']);
+    text_container..style.cssText += element['custom_style'];
     if (element['title']) {
         var title = document.createElement("h2");
         title.setAttribute('class', 'text-title');
@@ -43,7 +43,7 @@ function makeImage(element, container) {
     img_container = document.createElement("div");
     img_container.setAttribute('class', 'image-container');
     img_container.style.width = element['width']+'%';
-    img_container.setAttribute("style", element['custom_style']);
+    img_container..style.cssText += element['custom_style'];
     container.appendChild(img_container);
     loadImages([element], img_container);
 }

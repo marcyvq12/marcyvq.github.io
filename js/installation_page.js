@@ -23,7 +23,7 @@ function makeText(element, container) {
     var text_container = document.createElement("div");
     text_container.setAttribute('class', 'text-container');
     text_container.style.width = element['width']+'%';
-    text_container..style.cssText += element['custom_style'];
+    text_container.style.cssText += element['custom_style'];
     if (element['title']) {
         var title = document.createElement("h2");
         title.setAttribute('class', 'text-title');
@@ -43,7 +43,7 @@ function makeImage(element, container) {
     img_container = document.createElement("div");
     img_container.setAttribute('class', 'image-container');
     img_container.style.width = element['width']+'%';
-    img_container..style.cssText += element['custom_style'];
+    img_container.style.cssText += element['custom_style'];
     container.appendChild(img_container);
     loadImages([element], img_container);
 }

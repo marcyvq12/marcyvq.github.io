@@ -7,6 +7,16 @@ body {
   box-sizing: border-box;
 }
 
+/*.image-container {
+  width: 80vw;
+}*/
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .gallery-row > .gallery-column {
   padding: 0 8px;
 }

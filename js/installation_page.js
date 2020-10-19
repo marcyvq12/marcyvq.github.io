@@ -38,7 +38,11 @@ function makeText(element, container) {
 }
 
 function makeImage(element, container) {
-    loadImages([element], container);
+    img_container = document.createElement("div");
+    img_container.setAttribute('class', 'image-container');
+    img_container.setAttribute('width', element['width']);
+    container.appendChild(img_container);
+    loadImages([element], img_container);
 }
 
 function makeVideo(element, container) {

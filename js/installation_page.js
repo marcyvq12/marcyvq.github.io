@@ -3,8 +3,8 @@ function mapper(value) {
 }
 
 function checkGallery(row) {
-    for (i = 0; i < row.length; i++){
-        if (row[i]['type'] != 'image') {
+    for (k = 0; k < row.length; k++){
+        if (row[k]['type'] != 'image') {
             return false;
         }
     }
@@ -77,9 +77,9 @@ function importProject(path) {
     loadCSV(path).then(function(data) {
     var container = document.getElementById("project-container");
     var numrows = Math.max(...data.map(mapper));
-    for (i=1; i < 4; i++) {
-        console.log(i);
-        var row = data.filter(element => element['row'] == i);
+    for (fuck=1; fuck < numrows+1; fuck++) {
+        console.log(fuck);
+        var row = data.filter(element => element['row'] == fuck);
         var row_container = document.createElement("div");
         row_container.setAttribute('class', 'row');
         container.appendChild(row_container);
@@ -90,7 +90,7 @@ function importProject(path) {
         else {
             for (j=0; j<row.length; j++) {
                 type_selector(row[j], row_container);
-                debugger;
+                // debugger;
             }
         }
     }

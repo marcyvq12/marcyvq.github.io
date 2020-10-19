@@ -88,7 +88,6 @@ function importProject(path) {
             makeGallery(row, row_container);
         }
         else {
-//             type_selector(row[0], row_container);
             for (j=0; j<row.length; j++) {
                 type_selector(row[j], row_container);
             }

@@ -81,16 +81,16 @@ function importProject(path) {
         console.log(fuck);
         var row = data.filter(element => element['row'] == fuck);
         var row_container = document.createElement("div");
-        row_container.setAttribute('class', 'row');
         container.appendChild(row_container);
         // First check if the row will be a gallery (special case)
         if (row.length > 1 && checkGallery(row)) {
             makeGallery(row, row_container);
+            row_container.setAttribute('class', 'gallery-row');
         }
         else {
             for (j=0; j<row.length; j++) {
+                row_container.setAttribute('class', 'row');
                 type_selector(row[j], row_container);
-                // debugger;
             }
         }
     }

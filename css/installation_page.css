@@ -12,14 +12,15 @@ body {
 }*/
 
 .row {
-  width: 80vw;
+  width: 90vw;
   display: block;
-  padding-left: 10vw;
+  padding-left: 5vw;
   text-align: center;
 }
 
 .row > * {
   display: inline-block;
+  padding: 0 20px;
 }
 
 .row:after {
@@ -28,13 +29,15 @@ body {
   clear: both;
 }
 
-.text-container {
+.text-caption {
   text-align: left;
 }
 
 .image-container > img {
   width: 100%;
 }
+
+/*Gallery Stuff*/
 
 .gallery-row > .gallery-column {
   padding: 0 8px;
@@ -200,6 +203,99 @@ img.hover-shadow {
 
 .gallery-row img {margin-bottom: 40px}
   
+/*Video stuff*/
+
+.video-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 5px;
+}
+
+.video-player iframe,
+.video-player object,
+.video-player embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+}
+
+.video-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+.video-player img:hover {
+    -webkit-filter: brightness(75%);
+}
+
+.video-player .play {
+    height: 72px;
+    width: 72px;
+    left: 50%;
+    top: 50%;
+    margin-left: -36px;
+    margin-top: -36px;
+    position: absolute;
+    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+    cursor: pointer;
+}
+
+.video {
+    padding-left: 80px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+}
+
+.vid-embed {
+    width: 50vw;
+    display: inline-block;
+}
+
+.vid-caption {
+    width: 30vw;
+    display: inline-block;
+    text-align: left;
+}
+
+@media screen and (max-width: 750px) {
+
+.video {
+    padding-right: 10vw;
+    padding-left: 10vw;
+}
+
+.vid-embed {
+    width: 80vw;
+    display: block;
+}
+
+.vid-caption {
+    display: block;
+    width: 60vw;
+}
+}
+
  @media screen and (max-width: 700px) {
   .prev, 
   .next {
@@ -221,4 +317,6 @@ img.hover-shadow {
   .gallery-row img {
     margin-bottom: 20px;
   }
+
+
 }

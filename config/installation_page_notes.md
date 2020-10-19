@@ -11,8 +11,8 @@
 * Default margins and padding are not factored in to percentage so take that into account!
 
 ### Custom style
-* A dictionary with keys = properties, values = assignments
-* Not sure how this is gonna work yet
+* Add custom style to your elements
+* For images in a gallery, this doesn't work
 
 
 # Content types

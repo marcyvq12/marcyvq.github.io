@@ -13,12 +13,22 @@ body {
 
 .row {
   width: 80vw;
+  display: block;
+  padding-left: 10vw;
+}
+
+.row > * {
+  display: inline-block;
 }
 
 .row:after {
   content: "";
   display: table;
   clear: both;
+}
+
+.image-container > img {
+  width: 100%;
 }
 
 .gallery-row > .gallery-column {

@@ -43,8 +43,6 @@ function makeImage(element, container) {
     img_container.style.width = element['width']+'%';
     container.appendChild(img_container);
     loadImages([element], img_container);
-    var img_content = img_container.children[0];
-    img_content.style.width = element['width']+'%';
 }
 
 function makeVideo(element, container) {

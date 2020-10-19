@@ -74,6 +74,7 @@ function type_selector(element, container) {
 
 
 function importProject(path) {
+    debugger;
     loadCSV(path).then(function(data) {
     var container = document.getElementById("project-container");
     var numrows = Math.max(...data.map(mapper));

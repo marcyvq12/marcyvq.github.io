@@ -6,7 +6,7 @@ function loadImages(data, container) {
     columns = true;
   }
   var modal_content = document.getElementById("modalcontent");
-  var numslides = modal_content.childELementCount;
+  var numslides = modal_content.childElementCount;
   var captionbox = document.getElementById("captionbox");
 
   var numimages = data.length;

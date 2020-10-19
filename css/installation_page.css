@@ -15,6 +15,7 @@ body {
   width: 80vw;
   display: block;
   padding-left: 10vw;
+  text-align: center;
 }
 
 .row > * {

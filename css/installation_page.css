@@ -28,6 +28,10 @@ body {
   clear: both;
 }
 
+.text-container {
+  text-align: left;
+}
+
 .image-container > img {
   width: 100%;
 }

@@ -6,6 +6,7 @@ function loadImages(data, container) {
     columns = true;
   }
   var modal_content = document.getElementById("modalcontent");
+  var numslides = modal_content.childELementCount;
   var captionbox = document.getElementById("captionbox");
 
   var numimages = data.length;
@@ -14,7 +15,7 @@ function loadImages(data, container) {
     caption = data[i]['caption'];
     alt = data[i]['img_alt'];
     folder = data[i]['category'];
-    var numstr = (i+1).toString();
+    var numstr = (i+numslides).toString();
     var onclickstr = "openModal();currentSlide(".concat(numstr, ")");
     var img = document.createElement("img");
     var img_path = "images/".concat(folder, "/", fname);

@@ -61,6 +61,7 @@ function makeGallery(row, container) {
 }
 
 function type_selector(element, container) {
+    element.setAttribute("style", element['custom_style']);
     var content_type = element['type'];
     if (content_type == 'spacer') {
         makeSpacer(element, container);

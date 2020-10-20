@@ -65,10 +65,19 @@ function makeGallery(row, container) {
 
 function makePodcast(element, container) {
     var podcast_container = document.createElement("div");
+    podcast_container.setAttribute("class", "podcast_container");
 }
 
 function makeKuula(element, container) {
     var kuula_container = document.createElement("div");
+    kuula_container.setAttribute("class", "kuula-container");
+    kuula_container.style.width = element['width']+'%';
+    kuula_container.style.cssText += element['custom_style'];
+    var kuula = document.createElement("iframe");
+    kuula.src = element['embed_src'];
+    kuula_container.appendChild(kuula);
+    container.appendChild(kuula_container);
+
 }
 
 function type_selector(element, container) {

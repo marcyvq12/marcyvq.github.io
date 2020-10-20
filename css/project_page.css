@@ -11,6 +11,10 @@ body {
   width: 80vw;
 }*/
 
+#project-container {
+  padding-top: 30px;
+}
+
 .row {
   width: 90vw;
   display: block;

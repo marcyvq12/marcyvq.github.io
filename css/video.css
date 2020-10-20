@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+#vid-container {
+    padding-top: 30px;
+}
+
 .video-player {
     position: relative;
     padding-bottom: 56.23%;

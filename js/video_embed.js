@@ -5,6 +5,9 @@ function loadVideos(data, container) {
     var video_div = document.createElement("div");
     video_div.setAttribute("class", "video");
 
+    var vid_text_container = document.createElement("div");
+    vid_text_container.setAttribute("class", "vid-text");
+
     var vid_title = document.createElement("h2");
     vid_title.innerHTML = data[i]["title"];
     vid_title.setAttribute("class","vid-title");
@@ -24,8 +27,9 @@ function loadVideos(data, container) {
     yt_embed.setAttribute("data-site", data[i]["vid_site"]);
     vid_embed.appendChild(yt_embed);
 
-    video_div.appendChild(vid_title);
-    video_div.appendChild(vid_caption);
+    vid_text_container.appendChild(vid_title);
+    vid_text_container.appendChild(vid_caption);
+    video_div.appendChild(vid_text_container);
     video_div.appendChild(vid_embed);
 
     container.appendChild(video_div);

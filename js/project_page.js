@@ -63,6 +63,14 @@ function makeGallery(row, container) {
     loadImages(row, columns);
 }
 
+function makePodcast(element, container) {
+    var podcast_container = document.createElement("div");
+}
+
+function makeKuula(element, container) {
+    var kuula_container = document.createElement("div");
+}
+
 function type_selector(element, container) {
     var content_type = element['type'];
     if (content_type == 'spacer') {
@@ -76,6 +84,12 @@ function type_selector(element, container) {
     }
     else if (content_type == 'video') {
         makeVideo(element, container);
+    }
+    else if (content_type == 'podcast') {
+        makePodcast(element, container);
+    }
+    else if (content_type == 'kuula') {
+        makeKuula(element, container);
     }
 }
 

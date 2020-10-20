@@ -294,6 +294,10 @@ img.hover-shadow {
   text-align: left;
 }
 
+.iframe {
+  z-index: 1;
+}
+
 
  @media screen and (max-width: 800px) {
   .prev, 

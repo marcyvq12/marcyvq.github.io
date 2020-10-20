@@ -79,6 +79,10 @@ body {
     display: inline-block;
 }
 
+.iframe {
+    z-index: 1;
+}
+
 @media screen and (max-width: 750px) {
 
 .video {

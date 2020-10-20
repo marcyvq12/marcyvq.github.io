@@ -142,6 +142,7 @@ function getAllIndexes(arr) {
     }
     indexes.push(arr.length);
     console.log(indexes);
+    debugger;
     return indexes;
 }
 
@@ -168,6 +169,7 @@ function importProject(path) {
                 type_selector(row[j], row_container);
             }
         }
+        debugger;
     }
 });
 }

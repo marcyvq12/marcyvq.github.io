@@ -55,3 +55,13 @@ Required fields:
 * caption
 * vid_site
 * vid_id
+
+### Kuula
+Embeddable interactive panorama from kuula.com
+
+[TO DO]
+
+### Podcast
+Embeddable podcast (which site?)
+
+[TO DO]

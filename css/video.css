@@ -70,7 +70,7 @@ body {
     display: inline-block;
 }
 
-.vid-caption {
+.vid-text {
     width: 30vw;
     display: inline-block;
 }
@@ -87,7 +87,7 @@ body {
     display: block;
 }
 
-.vid-caption {
+.vid-text {
     display: block;
     width: 60vw;
 }

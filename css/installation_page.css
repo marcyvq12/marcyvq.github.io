@@ -286,7 +286,7 @@ img.hover-shadow {
     padding-right: 20px;
 }
 
-.vid-title {
+.vid-text {
   text-align: left;
 }
 
@@ -322,7 +322,7 @@ img.hover-shadow {
     display: block;
 }
 
-.vid-caption {
+.vid-text {
     display: block;
     width: 100%;
 }

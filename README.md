@@ -18,6 +18,7 @@
 - [x] video title on bottom
 - [x] project page js/css
 - [ ] add kuula and podcast types to project pages
+- [ ] include newline type in project config (no more row numbers)
 - [ ] design/format installation pages
 - [ ] rewrite about copy
 - [ ] style google calendar

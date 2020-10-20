@@ -15,10 +15,12 @@
 - [x] vimeo embeds
 - [x] events page
 - [x] about page redo
-- [ ] rewrite about
-- [ ] video title on bottom
+- [x] video title on bottom
+- [x] project page js/css
+- [ ] add kuula and podcast types to project pages
+- [ ] design/format installation pages
+- [ ] rewrite about copy
 - [ ] style google calendar
 - [ ] change gallery captions
 - [ ] header visible with scroll up
 - [ ] transitions
-- [ ] installation pages

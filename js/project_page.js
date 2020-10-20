@@ -73,8 +73,17 @@ function makeKuula(element, container) {
     kuula_container.setAttribute("class", "kuula-container");
     kuula_container.style.width = element['width']+'%';
     kuula_container.style.cssText += element['custom_style'];
+
     var kuula = document.createElement("iframe");
     kuula.src = element['embed_src'];
+    kuula.style.width = '100%';
+    kuula.style.height = '640px';
+    kuula.style.border = 'none';
+    kuula.setAttribute('frameborder', '0');
+    kuula.setAttribute('allowFullScreen', '');
+    kuula.setAttribute('allow', "xr-spatial-tracking; gyroscope; accelerometer");
+    kuula.setAttribute('scrolling', 'no');
+
     kuula_container.appendChild(kuula);
     container.appendChild(kuula_container);
 

@@ -143,7 +143,6 @@ function importProject(path) {
                 type_selector(row[j], row_container);
             }
         }
-        debugger;
     }
 });
 }

@@ -1,8 +1,8 @@
 # Formatting
 
-### Row
-* Assign each content element a row number, starting at 1
-* Can put multiple elements in a row, elements will be formatted left to right in order of csv lines
+### Lines
+* Lines start at first element and are separated by 'newline' type elements
+* Can have multiple elements on the same line
 
 ### Width
 * Width is in units of % of parent div
@@ -17,13 +17,17 @@
 
 # Content types
 
-### All types of content take fields:
-* type
+Each content element has a type. (REQUIRED)
+
+### All types of content (except newline) take fields:
 * row
 * width
 * custom_style (optional)
 
 ## Type options
+
+### Newline
+Starts a new line
 
 ### Spacer
 A simple div for formatting purposes

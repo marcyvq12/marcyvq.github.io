@@ -17,8 +17,9 @@
 - [x] about page redo
 - [x] video title on bottom
 - [x] project page js/css
-- [ ] add kuula and podcast types to project pages
-- [ ] include newline type in project config (no more row numbers)
+- [x] include newline type in project config (no more row numbers)
+- [x] add kuula type to project pages
+- [ ] add podcast type to project pages
 - [ ] design/format installation pages
 - [ ] rewrite about copy
 - [ ] style google calendar

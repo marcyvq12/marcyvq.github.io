@@ -109,31 +109,6 @@ function type_selector(element, container) {
 }
 
 
-// function importProject(path) {
-//     loadCSV(path).then(function(data) {
-//     var container = document.getElementById("project-container");
-//     var numrows = Math.max(...data.map(mapper));
-//     for (fuck=1; fuck < numrows+1; fuck++) {
-//         console.log(fuck);
-//         var row = data.filter(element => element['row'] == fuck);
-//         var row_container = document.createElement("div");
-//         container.appendChild(row_container);
-//         // First check if the row will be a gallery (special case)
-//         if (row.length > 1 && checkGallery(row)) {
-//             makeGallery(row, row_container);
-//             row_container.setAttribute('class', 'gallery-row');
-//         }
-//         else {
-//             for (j=0; j<row.length; j++) {
-//                 row_container.setAttribute('class', 'row');
-//                 type_selector(row[j], row_container);
-//             }
-//         }
-//     }
-// });
-// }
-
-
 function getAllIndexes(arr) {
     var indexes = [-1];
     for (l = 0; l < arr.length; l++) {

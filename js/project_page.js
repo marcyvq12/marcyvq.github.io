@@ -133,14 +133,13 @@ function type_selector(element, container) {
 // });
 // }
 
-const isNewLine = (element) => element['type'] == 'newline';
 
 function getAllIndexes(arr) {
-    var indexes = [-1], i = -1;
-    while ((i = arr.findIndex(isNewLine, i+1)) != -1){
-        indexes.push(i);
-        console.log(i);
-        debugger;
+    var indexes = [-1];
+    for (l = 0, l < arr.length, l++) {
+        if (arr[l]['type'] == 'newline') {
+            indexes.push(l);
+        }
     }
     indexes.push(arr.length);
     console.log(indexes);

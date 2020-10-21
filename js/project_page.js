@@ -171,7 +171,7 @@ function importProject(path) {
     //         }
     //     }
     //     debugger;
-    }
+    //}
 });
 }
 

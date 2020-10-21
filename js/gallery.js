@@ -21,8 +21,10 @@ function loadImages(data, container) {
     var img_path = "images/".concat(folder, "/", fname);
     img.src = img_path;
     img.setAttribute("title", caption);
-    img.setAttribute("class", "hover-shadow");
-    img.setAttribute("onclick", onclickstr);
+    if (folder != 'extras') {
+      img.setAttribute("onclick", onclickstr);
+      img.setAttribute("class", "hover-shadow");
+    }
     img.setAttribute("alt", alt);
 
     if (columns) {
@@ -35,19 +37,21 @@ function loadImages(data, container) {
       container.appendChild(img);
     }
 
-    var slide = document.createElement("div");
-    slide.setAttribute("class", "mySlides");
-    var numbertext = document.createElement("div");
-    numbertext.setAttribute("class", "numbertext");
-    numbertext.innerHTML = numstr.concat('/', numimages.toString());
-    var img_big = document.createElement("img");
-    img_big.src = img_path;
-    img_big.setAttribute("title", caption);
-    img_big.setAttribute("alt", alt);
+    if (folder != 'extras') {
+      var slide = document.createElement("div");
+      slide.setAttribute("class", "mySlides");
+      var numbertext = document.createElement("div");
+      numbertext.setAttribute("class", "numbertext");
+      numbertext.innerHTML = numstr.concat('/', numimages.toString());
+      var img_big = document.createElement("img");
+      img_big.src = img_path;
+      img_big.setAttribute("title", caption);
+      img_big.setAttribute("alt", alt);
 
-    slide.appendChild(numbertext);
-    slide.appendChild(img_big);
-    modal_content.insertBefore(slide, captionbox);
+      slide.appendChild(numbertext);
+      slide.appendChild(img_big);
+      modal_content.insertBefore(slide, captionbox);
+    }
   }
 }
 

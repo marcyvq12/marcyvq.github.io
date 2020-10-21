@@ -56,6 +56,10 @@ body {
   color: DarkSlateBlue;
 }
 
+.image-container {
+  vertical-align: bottom;
+}
+
 .image-container > img {
   width: 100%;
   vertical-align: bottom;

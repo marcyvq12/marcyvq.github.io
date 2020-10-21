@@ -139,6 +139,8 @@ function getAllIndexes(arr) {
     var indexes = [-1], i = -1;
     while ((i = arr.findIndex(isNewLine, i+1)) != -1){
         indexes.push(i);
+        console.log(i);
+        debugger;
     }
     indexes.push(arr.length);
     console.log(indexes);
@@ -152,24 +154,24 @@ function importProject(path) {
     var indexes = getAllIndexes(data);
     var numlines = indexes.length-1;
 
-    for (fuck=0; fuck < numlines; fuck++) {
-        var start_slice = indexes[fuck] + 1;
-        var end_slice = indexes[fuck+1];
-        var row = data.slice(start_slice, end_slice);
-        var row_container = document.createElement("div");
-        container.appendChild(row_container);
-        // First check if the row will be a gallery (special case)
-        if (row.length > 1 && checkGallery(row)) {
-            makeGallery(row, row_container);
-            row_container.setAttribute('class', 'gallery-row');
-        }
-        else {
-            for (j=0; j<row.length; j++) {
-                row_container.setAttribute('class', 'row');
-                type_selector(row[j], row_container);
-            }
-        }
-        debugger;
+    // for (fuck=0; fuck < numlines; fuck++) {
+    //     var start_slice = indexes[fuck] + 1;
+    //     var end_slice = indexes[fuck+1];
+    //     var row = data.slice(start_slice, end_slice);
+    //     var row_container = document.createElement("div");
+    //     container.appendChild(row_container);
+    //     // First check if the row will be a gallery (special case)
+    //     if (row.length > 1 && checkGallery(row)) {
+    //         makeGallery(row, row_container);
+    //         row_container.setAttribute('class', 'gallery-row');
+    //     }
+    //     else {
+    //         for (j=0; j<row.length; j++) {
+    //             row_container.setAttribute('class', 'row');
+    //             type_selector(row[j], row_container);
+    //         }
+    //     }
+    //     debugger;
     }
 });
 }

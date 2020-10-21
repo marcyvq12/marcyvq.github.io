@@ -47,12 +47,18 @@ body {
   color: DarkBlue;
 }
 
+.text-container a:hover {
+  color: Cornsilk;
+  text-shadow: 2px 2px 0 DarkBlue,
+}
+
 .text-container a:visited {
   color: DarkSlateBlue;
 }
 
 .image-container > img {
   width: 100%;
+  vertical-align: bottom;
 }
 
 /*Gallery Stuff*/

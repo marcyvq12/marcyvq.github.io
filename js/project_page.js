@@ -136,7 +136,7 @@ function type_selector(element, container) {
 
 function getAllIndexes(arr) {
     var indexes = [-1];
-    for (l = 0, l < arr.length, l++) {
+    for (l = 0; l < arr.length; l++) {
         if (arr[l]['type'] == 'newline') {
             indexes.push(l);
         }

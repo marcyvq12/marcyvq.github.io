@@ -337,8 +337,12 @@ img.hover-shadow {
     width: 100%;
 }
 
-.kuula-container> * {
+.kuula-container > * {
   height: 400px;
+}
+
+.kuula-container {
+  padding: 0;
 }
 }
 

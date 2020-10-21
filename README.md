@@ -21,6 +21,7 @@
 - [x] add kuula type to project pages
 - [ ] add podcast type to project pages
 - [ ] design/format installation pages
+- [ ] slideshow view for installation nav on desktop?
 - [ ] rewrite about copy
 - [ ] style google calendar
 - [ ] change gallery captions

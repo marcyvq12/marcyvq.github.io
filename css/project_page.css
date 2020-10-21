@@ -36,7 +36,19 @@ body {
 
 .text-container {
   text-align: left;
+}
+
+.text-container a {
   text-decoration: none;
+  font-weight: bold;
+}
+
+.text-container a:link {
+  color: DarkBlue;
+}
+
+.text-container a:visited {
+  color: DarkSlateBlue;
 }
 
 .image-container > img {

@@ -115,6 +115,12 @@ button:hover {
 	}
 }
 
+@media screen and (min-width: 700px) {
+	.intro {
+		display: none;
+	}
+}
+
 @media screen and (min-width: 1200px) {
 
 	.box h2 {
@@ -136,8 +142,8 @@ button:hover {
 		border: 2px solid black;
 		padding: 8px 12px;
 	}
-
+/*
 	.intro {
 		font-size: 30px;
-	}
+	}*/
 }

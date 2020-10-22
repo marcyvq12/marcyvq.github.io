@@ -26,6 +26,9 @@ function loadPages(data) {
 
 
     page.appendChild(link);
+    if (data[i]['hide']) {
+      page.style.display = none;
+    }
     container.appendChild(page);
   }
 }

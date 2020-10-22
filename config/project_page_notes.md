@@ -63,9 +63,5 @@ Required fields:
 ### Kuula
 Embeddable interactive panorama from kuula.com
 
-[TO DO]
-
-### Podcast
-Embeddable podcast (which site?)
-
-[TO DO]
+Required fields:
+* embed_src

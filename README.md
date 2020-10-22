@@ -19,7 +19,6 @@
 - [x] project page js/css
 - [x] include newline type in project config (no more row numbers)
 - [x] add kuula type to project pages
-- [ ] add podcast type to project pages
 - [ ] design/format installation pages
 - [ ] slideshow view for installation nav on desktop?
 - [ ] rewrite about copy

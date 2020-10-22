@@ -48,8 +48,7 @@ body {
 }
 
 .text-container a:hover {
-  color: Cornsilk;
-  text-shadow: 2px 2px 0 DarkBlue,
+  color: Blue;
 }
 
 .text-container a:visited {

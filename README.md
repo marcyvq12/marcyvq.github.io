@@ -19,9 +19,10 @@
 - [x] project page js/css
 - [x] include newline type in project config (no more row numbers)
 - [x] add kuula type to project pages
-- [ ] design/format installation pages
+- [x] design/format installation pages
+- [ ] copy edit
+- [ ] favicon
 - [ ] slideshow view for installation nav on desktop?
-- [ ] rewrite about copy
 - [ ] style google calendar
 - [ ] change gallery captions
 - [ ] header visible with scroll up

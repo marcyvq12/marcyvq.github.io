@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
+<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="./css/home.css">
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -10,6 +10,8 @@ $("#header").load("./header.html");
 $('#footer').load("./footer.html");
 });
 </script>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
 <body onload="home_setup('./config/home_config.csv')">
 <div id= "header"></div>
 
